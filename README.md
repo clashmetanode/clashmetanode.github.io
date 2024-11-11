@@ -1,4 +1,4 @@
-# 「11月9日」最高速度19.2M/S，2024年最新高速Clash-Meta免费节点订阅链接  更新时间 2024-11-09 09:35:44
+# 「11月11日」最高速度20.2M/S，2024年最新高速Clash-Meta免费节点订阅链接  更新时间 2024-11-11 10:00:31
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clashmetanode.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,19 +9,19 @@
 
 ### Clash订阅链接
 
-- https://clashmetanode.github.io/uploads/2024/11/0-20241109.yaml
-- https://clashmetanode.github.io/uploads/2024/11/1-20241109.yaml
-- https://clashmetanode.github.io/uploads/2024/11/2-20241109.yaml
-- https://clashmetanode.github.io/uploads/2024/11/3-20241109.yaml
-- https://clashmetanode.github.io/uploads/2024/11/4-20241109.yml
+- https://clashmetanode.github.io/uploads/2024/11/0-20241111.yaml
+- https://clashmetanode.github.io/uploads/2024/11/1-20241111.yaml
+- https://clashmetanode.github.io/uploads/2024/11/2-20241111.yaml
+- https://clashmetanode.github.io/uploads/2024/11/3-20241111.yaml
+- https://clashmetanode.github.io/uploads/2024/11/4-20241111.yml
 
 ### V2ray订阅链接
 
-- https://clashmetanode.github.io/uploads/2024/11/0-20241109.txt
-- https://clashmetanode.github.io/uploads/2024/11/1-20241109.txt
-- https://clashmetanode.github.io/uploads/2024/11/2-20241109.txt
-- https://clashmetanode.github.io/uploads/2024/11/3-20241109.txt
-- https://clashmetanode.github.io/uploads/2024/11/4-20241109.txt
+- https://clashmetanode.github.io/uploads/2024/11/0-20241111.txt
+- https://clashmetanode.github.io/uploads/2024/11/1-20241111.txt
+- https://clashmetanode.github.io/uploads/2024/11/2-20241111.txt
+- https://clashmetanode.github.io/uploads/2024/11/3-20241111.txt
+- https://clashmetanode.github.io/uploads/2024/11/4-20241111.txt
 
 ## 更多clash节点订阅 ：
 
