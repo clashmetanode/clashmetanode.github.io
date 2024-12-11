@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashmetanode.github.io/news/article-24500.htm" />
+    <title>JavaScript相邻元素平均值的数组方法详解</title>
+        <meta name="description" content="假设我们有一个数字数组- const&nbsp;arr&nbsp;=&nbsp;[3,&nbsp;5,&nbsp;7,&nbsp;8,&nbsp;3,&nbsp;5,&nbsp;7,&nbsp;4,&" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFCZ6X6RGC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LFCZ6X6RGC');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>JavaScript相邻元素平均值的数组方法详解</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li>
+                    <a href="#">关于</a>
+                </li>
+                <li>
+                    <a href="#">联系</a>
+                </li>
+            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                          				  				  				<p>假设我们有一个数字数组-</p> <pre>const&nbsp;arr&nbsp;=&nbsp;[3,&nbsp;5,&nbsp;7,&nbsp;8,&nbsp;3,&nbsp;5,&nbsp;7,&nbsp;4,&nbsp;2,&nbsp;8,&nbsp;4,&nbsp;2,&nbsp;1];</pre> <p>我们需要编写一个函数，该函数返回一个数组，该数组包含对应元素及其前任元素的平均值。对于第一个元素，因为没有前任，所以应该返回非常元素。</p> <p>让我们为该函数编写代码，我们将使用Array.prototype.map()函数解决此问题-</p> <h2>示例</h2> <pre>const&nbsp;arr&nbsp;=&nbsp;[3,&nbsp;5,&nbsp;7,&nbsp;8,&nbsp;3,&nbsp;5,&nbsp;7,&nbsp;4,&nbsp;2,&nbsp;8,&nbsp;4,&nbsp;2,&nbsp;1]; const&nbsp;consecutiveAverage&nbsp;=&nbsp;arr&nbsp;=&gt;&nbsp;{ &nbsp;&nbsp;&nbsp;return&nbsp;arr.map((el,&nbsp;ind,&nbsp;array)&nbsp;=&gt;&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;first&nbsp;=&nbsp;(array[ind-1]&nbsp;||&nbsp;0); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;second&nbsp;=&nbsp;(1&nbsp;+&nbsp;!!ind); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;((el&nbsp;+&nbsp;first)&nbsp;/&nbsp;second); &nbsp;&nbsp;&nbsp;}); }; console.log(consecutiveAverage(arr));</pre> <p>输出结果</p> <p>这将在控制台中产生以下输出-</p> <pre>[ &nbsp;&nbsp;&nbsp;3,&nbsp;&nbsp;&nbsp;4,&nbsp;6,&nbsp;7.5,&nbsp;5.5,&nbsp;4, &nbsp;&nbsp;&nbsp;6,&nbsp;5.5,&nbsp;3,&nbsp;&nbsp;&nbsp;5,&nbsp;&nbsp;&nbsp;6,&nbsp;3, &nbsp;&nbsp;&nbsp;1.5 ]</pre> <div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-23741.htm">让猫挠了出血过了24小时有事吗会感染吗会传染吗（被猫挠出血了过24小时了）</a></p>
+                                        <p>下一个：<a href="/news/article-24501.htm">如何使用 Redis 缓存</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-6-15-free-node-subscribe-links.htm" title="「6月15日」最高速度18.6M/S，2024年最新高速Clash-Meta免费节点订阅链接">「6月15日」最高速度18.6M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-20992.htm" title="动物疫苗打到人身上有事吗会传染吗 动物疫苗打到人身上有事吗会传染吗视频">动物疫苗打到人身上有事吗会传染吗 动物疫苗打到人身上有事吗会传染吗视频</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-6-clash-node-daily-updates.htm" title="「9月6日」最高速度21.5M/S，2024年最新高速Clash-Meta免费节点订阅链接">「9月6日」最高速度21.5M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-4-14-clash-v2ray-ss-ssr.htm" title="「4月14日」最高速度19.2M/S，2024年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接">「4月14日」最高速度19.2M/S，2024年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-31-free-v2ray.htm" title="「8月31日」最高速度21.6M/S，2024年最新高速Clash-Meta免费节点订阅链接">「8月31日」最高速度21.6M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-23-free-node-subscribe-links.htm" title="「11月23日」最高速度19.3M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月23日」最高速度19.3M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-9-free-ssr-node.htm" title="「6月9日」最高速度19.1M/S，2024年最新高速Clash-Meta免费节点订阅链接">「6月9日」最高速度19.1M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-21449.htm" title="动物防疫站打狂犬疫苗免费吗多少钱（动物防疫站打狂犬疫苗免费吗多少钱一针）">动物防疫站打狂犬疫苗免费吗多少钱（动物防疫站打狂犬疫苗免费吗多少钱一针）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-30-free-shadowrocket-node.htm" title="「7月30日」最高速度19.2M/S，2024年最新高速Clash-Meta免费节点订阅链接">「7月30日」最高速度19.2M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-3-free-node-subscribe-links.htm" title="「6月3日」最高速度20.9M/S，2024年最新高速Clash-Meta免费节点订阅链接">「6月3日」最高速度20.9M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-05/" title="2024-05 归档">2024-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2024-04/" title="2024-04 归档">2024-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+            <p>
+                ClashMetaNode官方节点站 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
