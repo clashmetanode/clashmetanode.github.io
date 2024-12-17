@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashmetanode.github.io/news/article-27001.htm" />
+    <title>基于Python编写一个简单的端口扫描器_python</title>
+        <meta name="description" content="目录  1、需要的库 2、获取一个 host 地址 3、循环所有的端口 4、完整脚本   端口扫描是非常实用的，不止用在信息安全方面，日常的运维也用得到。这方面的工具也不要太多，搞过 CTF 的朋友会" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFCZ6X6RGC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LFCZ6X6RGC');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>基于Python编写一个简单的端口扫描器_python</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li>
+                    <a href="#">关于</a>
+                </li>
+                <li>
+                    <a href="#">联系</a>
+                </li>
+            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                          				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">1、需要的库</a></li> <li><a href="#_label1" rel="nofollow">2、获取一个 host 地址</a></li> <li><a href="#_label2" rel="nofollow">3、循环所有的端口</a></li> <li><a href="#_label3" rel="nofollow">4、完整脚本</a></li> </ul> </div> <p>端口扫描是非常实用的，不止用在信息安全方面，日常的运维也用得到。这方面的工具也不要太多，搞过 CTF 的朋友会告诉你有多少端口扫描工具，那为什么还要用 Python 再自己实现一遍？这个问题就像饭店里的菜已经很好吃了，为什么还要自己烧菜一样，主要还是为了适合自己的口味，添加自己需要的个性功能。</p> <p>今天我们将用 20 行代码编写一个简单的端口扫描器。让我们开始吧！</p> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>1、需要的库</h2> <p>都是标准库，因此内网环境也不影响：</p> <div class="ay1code"> <pre class="brush:py;">import socket  import argparse  import sys  import time  </pre> </div> <p>套接字库是一个低级网络接口库，它允许我们在脚本中创建网络连接。argparse 库用于解释传递给我们脚本的参数。sys 库允许我们与系统交互。最后，time 库用来统计耗时。</p> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>2、获取一个 host 地址</h2> <div class="ay1code"> <pre class="brush:py;">parser = argparse.ArgumentParser()  parser.add_argument('host')  args = parser.parse_args()  </pre> </div> <p>这样脚本在运行的时候，第一个参数就可以传入一个主机名或 ip 地址，下文就可以通过 args.host 来使用。</p> <p class="maodian"><a name="_label2" rel="nofollow"></a></p> <h2>3、循环所有的端口</h2> <p>端口占用 2 个字节，因此其范围是 1-65535</p> <div class="ay1code"> <pre class="brush:py;">start = time.time()  try:      for port in range(1, 65536):          sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)          sock.settimeout(1)          result = sock.connect_ex((args.host, port))          if result == 0:              print("Port: {} Open".format(port))          sock.close()  except KeyboardInterrupt:      sys.exit()  end = time.time()  </pre> </div> <p>如果 sock.connect_ex 返回了 0 说明端口开放，为了让程序正常退出，我们加上 try except 来捕获键盘发起的中断。</p> <p class="maodian"><a name="_label3" rel="nofollow"></a></p> <h2>4、完整脚本</h2> <p>一旦 for 循环完成并扫描了所有端口，我们将获取时间并打印出脚本运行的时间：</p> <div class="ay1code"> <pre class="brush:py;">import socket  import argparse  import sys  import time    parser = argparse.ArgumentParser()  parser.add_argument('host')  args = parser.parse_args()  start = time.time()    try:      for port in range(1, 65536):          sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)          sock.settimeout(1)          result = sock.connect_ex((args.host, port))          if result == 0:              print("Port: {} Open".format(port))          sock.close()  except KeyboardInterrupt:      sys.exit()    end = time.time()  print(f"Scanning completed in: {end-start:.3f}s")  </pre> </div> <p>除去空行，代码一共 20 行，运行效果如下：</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220424/4fafc1d22f739c785b84c8ddcf0e3447.jpg"></p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-26999.htm">ElasticSearch基础学习（SpringBoot集成ES）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-6-6-free-shadowrocket-node.htm" title="「6月6日」最高速度19.8M/S，2024年最新高速Clash-Meta免费节点订阅链接">「6月6日」最高速度19.8M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-17-free-clash.htm" title="「7月17日」最高速度20.2M/S，2024年最新高速Clash-Meta免费节点订阅链接">「7月17日」最高速度20.2M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-16-node-share.htm" title="「7月16日」最高速度19.9M/S，2024年最新高速Clash-Meta免费节点订阅链接">「7月16日」最高速度19.9M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-4-28-clash-v2ray-ss-ssr.htm" title="「4月28日」最高速度22.8M/S，2024年最新高速Shadowrocket/SSR/Clash/V2ray免费节点订阅链接">「4月28日」最高速度22.8M/S，2024年最新高速Shadowrocket/SSR/Clash/V2ray免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-8-free-clash-subscribe.htm" title="「8月8日」最高速度20.5M/S，2024年最新高速Clash-Meta免费节点订阅链接">「8月8日」最高速度20.5M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-4-17-free-clash.htm" title="「4月17日」最高速度21.4M/S，2024年最新高速SSR/V2ray/Shadowrocket/Clash免费节点订阅链接">「4月17日」最高速度21.4M/S，2024年最新高速SSR/V2ray/Shadowrocket/Clash免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-25-node-share.htm" title="「9月25日」最高速度22.6M/S，2024年最新高速Clash-Meta免费节点订阅链接">「9月25日」最高速度22.6M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-5-1-free-node-subscribe-links.htm" title="「5月1日」最高速度21.5M/S，2024年最新高速Clash/Shadowrocket/V2ray/SSR免费节点订阅链接">「5月1日」最高速度21.5M/S，2024年最新高速Clash/Shadowrocket/V2ray/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-27001.htm" title="基于Python编写一个简单的端口扫描器_python">基于Python编写一个简单的端口扫描器_python</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-5-6-clash-node.htm" title="「5月6日」最高速度22.3M/S，2024年最新高速Clash/Shadowrocket/V2ray/SSR免费节点订阅链接">「5月6日」最高速度22.3M/S，2024年最新高速Clash/Shadowrocket/V2ray/SSR免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">51</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-05/" title="2024-05 归档">2024-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2024-04/" title="2024-04 归档">2024-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+            <p>
+                ClashMetaNode官方节点站 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
