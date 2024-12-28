@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashmetanode.github.io/news/article-31699.htm" />
+    <title>C语言中的零长度数组使用说明</title>
+        <meta name="description" content="C语言中的零长度数组用法详解  &nbsp;&nbsp;&nbsp; 在C语言中允许在结构体和联合体中定义零长度的数组，写法可以是以下两种：  char p[]或者char p[0]，这个数组定义在结" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFCZ6X6RGC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LFCZ6X6RGC');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>C语言中的零长度数组使用说明</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li>
+                    <a href="#">关于</a>
+                </li>
+                <li>
+                    <a href="#">联系</a>
+                </li>
+            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views">                     C语言中的零长度数组用法详解<br /> <br /> &nbsp;&nbsp;&nbsp; 在C语言中允许在结构体和联合体中定义零长度的数组，写法可以是以下两种：<br /> <br /> char p[]或者char p[0]，这个数组定义在结构体或者联合体中，不占用空间大小。<br /> <br /> 这是个广泛使用的常见技巧，常用来构成缓冲区。比起指针，用空数组有这样的优势： &nbsp;<br /> <br /> 1.不需要初始化，数组名直接就是所在的偏移； &nbsp;<br /> <br /> 2.不占任何空间，指针需要占用int长度空间，空数组不占任何空间。 &nbsp;<br /> <br /> &nbsp;&nbsp;&nbsp;&nbsp; “这个数组不占用任何内存”，意味着这样的结构节省空间；“该数组的内存地址就和他后面的元素的地址相同”，意味着无需初始化，数组名就是后面元素的地址，直接就能当做指针使用。<br /> <br /> 这样的写法最适合制作动态buffer。因为可以这样分配空间： &nbsp;<br /> <br /> malloc（sizeof(struct&nbsp; XXX）＋&nbsp; buff_len）； &nbsp;<br /> <br /> 看出来好处没有？直接就把buffer的结构体和缓冲区一块分配了。用起来也非常方便，因为现在kongsuzu其实变成了buff_len长度的数组了。 &nbsp;<br /> <br /> 这样的好处有两点： &nbsp;<br /> <br /> &nbsp;&nbsp;&nbsp; 一次分配解决问题，省了不少麻烦。大家知道为了防止内存泄漏，如果是分两次分配（结构体和缓冲区），那么要是第二次malloc失败了，必须回滚释放第一个分配的结构体。这样带来了编码麻烦。其次，分配了第二个缓冲区以后，如果结构里面用的是指针，还要为这个指针赋值。同样，在free这个buffer的时候，用指针也要两次free。如果用空数组，所有问题一次解决。<br /> <br /> &nbsp;&nbsp;&nbsp; 其次，大家知道小内存的管理是非常困难的，如果用指针，这个malloc分配出来的空间中的struct部分就是小内存了，在系统内存在多了势必严重影响内存管理的性能。要是用空数组把struct和实际数据缓冲区一次分配大块问题，就没有这个问题。 &nbsp;</p> <p> 即使零长度数组的优点如此之多，但是使用的时候也是要倍加小心：<br /> <br /> 1.零长度数组不是所有的c标准都支持，gnu c支持，ANSI C不支持，C++不支持。<br /> <br /> 2.如果某种情况下出现了这个结构体中只有零长度数组一个元素，这个可能会就会导致错误降临。<br /> <br /> 3.零长度数组需要放于结构体的结尾处。                 </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-31183.htm">动物疫苗价格排行榜前十的有哪些种类图片及价格（动物疫苗排名）</a></p>
+                                        <p>下一个：<a href="/news/article-31700.htm">怎么去除房间猫留下的气味（如何去除房间里的猫骚味）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-5-11-free-v2ray.htm" title="「5月11日」最高速度20.3M/S，2024年最新高速V2ray/SSR/Clash/Shadowrocket免费节点订阅链接">「5月11日」最高速度20.3M/S，2024年最新高速V2ray/SSR/Clash/Shadowrocket免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-28-clash-windows.htm" title="「6月28日」最高速度22.5M/S，2024年最新高速Clash-Meta免费节点订阅链接">「6月28日」最高速度22.5M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-10-node-share-links.htm" title="「6月10日」最高速度22.6M/S，2024年最新高速Clash-Meta免费节点订阅链接">「6月10日」最高速度22.6M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-25-node-share.htm" title="「9月25日」最高速度22.6M/S，2024年最新高速Clash-Meta免费节点订阅链接">「9月25日」最高速度22.6M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-6-clash-node-daily-updates.htm" title="「9月6日」最高速度21.5M/S，2024年最新高速Clash-Meta免费节点订阅链接">「9月6日」最高速度21.5M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-22821.htm" title="小孩儿被猫抓伤需要打针吗（小孩被猫抓伤了要打疫苗吗）">小孩儿被猫抓伤需要打针吗（小孩被猫抓伤了要打疫苗吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-12-free-v2ray.htm" title="「12月12日」最高速度20.7M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月12日」最高速度20.7M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-14-free-subscribe-node.htm" title="「12月14日」最高速度22M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月14日」最高速度22M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-5-9-free-subscribe-node.htm" title="「5月9日」最高速度18.1M/S，2024年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接">「5月9日」最高速度18.1M/S，2024年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-19-free-high-speed-nodes.htm" title="「7月19日」最高速度20.2M/S，2024年最新高速Clash-Meta免费节点订阅链接">「7月19日」最高速度20.2M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-05/" title="2024-05 归档">2024-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2024-04/" title="2024-04 归档">2024-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                ClashMetaNode官方节点站 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
