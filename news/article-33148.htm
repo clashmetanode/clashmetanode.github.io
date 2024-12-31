@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashmetanode.github.io/news/article-33148.htm" />
+    <title>前端开发：npm install 报错npm ERR! Cannot read property ‘extraneous‘ of undefined的解决方法</title>
+        <meta name="description" content="前言 项目为了上基线，把本地项目编译之后的node_modules文件和dist文件都删掉了，然后上完基线之后，重新编译本地项目代码，结果初始化项目失败，提示无法读取未定义的“外部”属性，原因就是上一" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFCZ6X6RGC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LFCZ6X6RGC');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>前端开发：npm install 报错npm ERR! Cannot read property ‘extraneous‘ of undefined的解决方法</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li>
+                    <a href="#">关于</a>
+                </li>
+                <li>
+                    <a href="#">联系</a>
+                </li>
+            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <h2>前言</h2> <p>项目为了上基线，把本地项目编译之后的node_modules文件和dist文件都删掉了，然后上完基线之后，重新编译本地项目代码，结果初始化项目失败，提示无法读取未定义的“外部”属性，原因就是上一次编译的项目包没有处理干净造成的报错，那么本篇博文就来分享一下相关的解决方法。</p> <h2>报错提示</h2> <p>在删除本地项目编译生成的node_modules文件夹，然后重新编译项目：npm install 然后项目报错，报错信息如下所示：</p> <pre><code>admin@MacBook-Pro Project % npm install  npm ERR! Cannot read property 'extraneous' of undefined    npm ERR! A complete log of this run can be found in:  npm ERR! &nbsp; &nbsp; /Users/admin/.npm/_logs/2021-07-16T02_50_26_885Z-debug.log</code></pre> <h2></h2> <h2>分析</h2> <p>通过上述报错信息可以看到，在重新编译项目的时候编译失败，无法读取未定义的“外部”属性，原因就是前一次的项目编译残留在package-lock.json文件中的三方包引起的。如果只删除了项目编译的node_modules文件夹，未删除package-lock.json文件，然后直接进行npm install ，那么只会安装package-lock.json里面描述的三方包。</p> <p style="text-align:center;"> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-32656.htm">宠物领养须知怎么写范文图片（宠物领养需要带什么证件）</a></p>
+                                        <p>下一个：<a href="/news/article-33149.htm">动物疫苗去哪***好（动物疫苗防疫站）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-28397.htm" title="微服务nacos简单部署+网关设置+日志管理">微服务nacos简单部署+网关设置+日志管理</a></li>
+                        <li class="py-2"><a href="/news/article-31182.htm" title="Python项目：学生信息管理系统（完整版）">Python项目：学生信息管理系统（完整版）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-4-28-clash-v2ray-ss-ssr.htm" title="「4月28日」最高速度22.8M/S，2024年最新高速Shadowrocket/SSR/Clash/V2ray免费节点订阅链接">「4月28日」最高速度22.8M/S，2024年最新高速Shadowrocket/SSR/Clash/V2ray免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-31699.htm" title="C语言中的零长度数组使用说明">C语言中的零长度数组使用说明</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-6-free-node-subscribe.htm" title="「10月6日」最高速度20.5M/S，2024年最新高速Clash-Meta免费节点订阅链接">「10月6日」最高速度20.5M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-5-9-free-subscribe-node.htm" title="「5月9日」最高速度18.1M/S，2024年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接">「5月9日」最高速度18.1M/S，2024年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-22367.htm" title="猫咪3针疫苗间隔多久打第三针（小猫咪三针疫苗间隔时间）">猫咪3针疫苗间隔多久打第三针（小猫咪三针疫苗间隔时间）</a></li>
+                        <li class="py-2"><a href="/news/article-27463.htm" title="动物医院的工作流程及要点 动物医院的工作流程及要点是什么">动物医院的工作流程及要点 动物医院的工作流程及要点是什么</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-12-node-share.htm" title="「9月12日」最高速度20.9M/S，2024年最新高速Clash-Meta免费节点订阅链接">「9月12日」最高速度20.9M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-5-11-free-v2ray.htm" title="「5月11日」最高速度20.3M/S，2024年最新高速V2ray/SSR/Clash/Shadowrocket免费节点订阅链接">「5月11日」最高速度20.3M/S，2024年最新高速V2ray/SSR/Clash/Shadowrocket免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-05/" title="2024-05 归档">2024-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2024-04/" title="2024-04 归档">2024-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                ClashMetaNode官方节点站 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
