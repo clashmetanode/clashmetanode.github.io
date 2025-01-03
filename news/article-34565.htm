@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashmetanode.github.io/news/article-34565.htm" />
+    <title>避坑！js正确地使用fill()初始化二维数组_在线工具</title>
+        <meta name="description" content="fill()方法都知道，填充数组 比如：   let a = new Array(5).fill(0); console.log(a); // 输出结果为[0, 0, 0, 0, 0]  当我们想使用" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFCZ6X6RGC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LFCZ6X6RGC');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>避坑！js正确地使用fill()初始化二维数组_在线工具</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li>
+                    <a href="#">关于</a>
+                </li>
+                <li>
+                    <a href="#">联系</a>
+                </li>
+            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				</h1> <p>fill()方法都知道，填充数组</p> <div>比如：</div> <div> <div class="cnblogs_code"> <pre>let a = <span style="color: rgba(0, 0, 255, 1)">new</span> Array(5).fill(0<span style="color: rgba(0, 0, 0, 1)">); console.log(a); </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 输出结果为[0, 0, 0, 0, 0]</span></pre> </div> <p>当我们想使用fill创建一个二维数组时</p> <div class="cnblogs_code"> <pre>let arr=<span style="color: rgba(0, 0, 255, 1)">new</span> Array(5).fill(<span style="color: rgba(0, 0, 255, 1)">new</span> Array(5).fill(0<span style="color: rgba(0, 0, 0, 1)">)) console.log(arr)</span></pre> </div> <p>输出</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220507/e547eefd7fd45a596f268bb4ef6e525f.jpg" alt="避坑！js正确地使用fill()初始化二维数组_在线工具"></p> <p> </p> <p> 看似没有什么问题，当我给某个元素重新赋值</p> <div class="cnblogs_code"> <pre>arr[1][1]=1<span style="color: rgba(0, 0, 0, 1)"> console.log(arr)</span></pre> </div> <p>输出</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220507/e389cc520c8450c508c95425d5cffb71.jpg" alt="避坑！js正确地使用fill()初始化二维数组_在线工具"></p> <p> </p> <p> 我只想给arr[1][1]赋值，但是每一个第一维数组的下标为1的元素的值全部改变了，这不是我们想要的。</p> </h1> <p>fill()的参数不是基本类型时，比如数组、对象，并不是将它的值填充到数组，而是将它的地址填充到数组，所以填充后数组的每一项都指向的是同一个对象，就会出现"牵一发而动全身"的现象。</p> </h1> <p>1.老老实实的遍历，不聊</p> <p>2.使用map()给每个第一维的数组分别赋值，<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.runoob.com/jsref/jsref-map.html"  target="_blank"  rel="nofollow">不懂map()点这里</a></p> <div class="cnblogs_code"> <pre>let arr=<span style="color: rgba(0, 0, 255, 1)">new</span> Array(5).fill(0).map(item=&gt;<span style="color: rgba(0, 0, 255, 1)">new</span> Array(5).fill(0<span style="color: rgba(0, 0, 0, 1)">)) arr[</span>1][1]=1<span style="color: rgba(0, 0, 0, 1)"> console.log(arr)</span></pre> </div> <p>输出</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220507/6c264a6e12fe8690c6ecccbced9e7788.jpg" alt="避坑！js正确地使用fill()初始化二维数组_在线工具"></p> <p>这样就只有arr[1][1]发生改变了，完美解决。</p> <p> 原文链接：https://www.cnblogs.com/hmswt/p/14385957.html</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-34091.htm">动物疫苗种类哪几种最安全可靠的简单介绍</a></p>
+                                        <p>下一个：<a href="/news/article-34567.htm">动物活疫苗对人的伤害有哪些呢图片（动物活疫苗与死疫苗的区别）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-8-2-shadowrocket-node.htm" title="「8月2日」最高速度18M/S，2024年最新高速Clash-Meta免费节点订阅链接">「8月2日」最高速度18M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-6-clash-node-daily-updates.htm" title="「9月6日」最高速度21.5M/S，2024年最新高速Clash-Meta免费节点订阅链接">「9月6日」最高速度21.5M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-25-shadowrocket-node.htm" title="「8月25日」最高速度18.4M/S，2024年最新高速Clash-Meta免费节点订阅链接">「8月25日」最高速度18.4M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-5-free-v2ray.htm" title="「10月5日」最高速度19.6M/S，2024年最新高速Clash-Meta免费节点订阅链接">「10月5日」最高速度19.6M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-20072.htm" title="济南宠物领养微信群号（济南宠物领养微信群号是什么）">济南宠物领养微信群号（济南宠物领养微信群号是什么）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-26-free-v2ray.htm" title="「7月26日」最高速度18.2M/S，2024年最新高速Clash-Meta免费节点订阅链接">「7月26日」最高速度18.2M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-24-node-share.htm" title="「6月24日」最高速度20.6M/S，2024年最新高速Clash-Meta免费节点订阅链接">「6月24日」最高速度20.6M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-24-free-v2ray.htm" title="「10月24日」最高速度18M/S，2024年最新高速Clash-Meta免费节点订阅链接">「10月24日」最高速度18M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-4-free-node-subscribe-links.htm" title="「6月4日」最高速度21.2M/S，2024年最新高速Clash-Meta免费节点订阅链接">「6月4日」最高速度21.2M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-31183.htm" title="动物疫苗价格排行榜前十的有哪些种类图片及价格（动物疫苗排名）">动物疫苗价格排行榜前十的有哪些种类图片及价格（动物疫苗排名）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-05/" title="2024-05 归档">2024-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2024-04/" title="2024-04 归档">2024-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                ClashMetaNode官方节点站 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
