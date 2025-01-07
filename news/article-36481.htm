@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashmetanode.github.io/news/article-36481.htm" />
+    <title>JPA写原生SQL</title>
+        <meta name="description" content="代码示例  @RepositorypublicinterfaceParticipantRepositoryextendsJpaRepository&lt;Participant,Long&gt;{  " />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFCZ6X6RGC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LFCZ6X6RGC');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>JPA写原生SQL</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li>
+                    <a href="#">关于</a>
+                </li>
+                <li>
+                    <a href="#">联系</a>
+                </li>
+            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> </h1> <ul> <li>代码示例</li> </ul> <pre><code class="prism language-java"><span class="token annotation punctuation">@Repository</span><span class="token keyword">public</span><span class="token keyword">interface</span><span class="token class-name">ParticipantRepository</span><span class="token keyword">extends</span><span class="token class-name">JpaRepository</span><span class="token generics function"><span class="token punctuation">&lt;</span>Participant<span class="token punctuation">,</span>Long<span class="token punctuation">&gt;</span></span><span class="token punctuation">{<!-- --></span>     List<span class="token generics function"><span class="token punctuation">&lt;</span>Participant<span class="token punctuation">&gt;</span></span><span class="token function">getByAppointmentId</span><span class="token punctuation">(</span>Long appointmentId<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">int</span><span class="token function">deleteByAppointmentId</span><span class="token punctuation">(</span>Long appointmentId<span class="token punctuation">)</span><span class="token punctuation">;</span>      Participant<span class="token function">getById</span><span class="token punctuation">(</span>Long id<span class="token punctuation">)</span><span class="token punctuation">;</span>      List<span class="token generics function"><span class="token punctuation">&lt;</span>Participant<span class="token punctuation">&gt;</span></span><span class="token function">getByUserId</span><span class="token punctuation">(</span>String userId<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">/**      * 根据appointmentids删除一组数据      * @param appointmentIds      */</span><span class="token annotation punctuation">@Transactional</span><span class="token annotation punctuation">@Modifying</span><span class="token annotation punctuation">@Query</span><span class="token punctuation">(</span>nativeQuery<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">,</span>value<span class="token operator">=</span><span class="token string">"delete from participant where appointment_id in :appointmentIds"</span><span class="token punctuation">)</span><span class="token keyword">void</span><span class="token function">deleteByAppointmentIds</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Param</span><span class="token punctuation">(</span><span class="token string">"appointmentIds"</span><span class="token punctuation">)</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>Long<span class="token punctuation">&gt;</span></span> appointmentIds<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <ul> <li>最后一个deleteByAppintmentIds方法是根据传入的一组appointmentid数据删除数据库所有匹配的结果。</li> <li>@Transactional注解：开启事务，当sql语句执行的是更新、删除时一定要加</li> <li>@Modifying注解：标识此方法执行的是更新、删除、插入操作；（JPA默认使用executeQuery()执行自定义的sql语句，当自定义的时update、insert、delete语句时，需要使用execute()执行，否则会报错）</li> <li>@Query注解：用来写sql，nativeQuery = true说明写的sql是本地sql，不需要经过JPA二次翻译，value中的值为sql语句体</li> </ul> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-35894.htm">MySQL性能优化 &#8211; 别再只会说加索引了_在线工具</a></p>
+                                        <p>下一个：<a href="/news/article-36482.htm">北京中农大动物医院有限公司处方笺 北京中农大动物药业官网</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-10-17-free-high-speed-nodes.htm" title="「10月17日」最高速度22.3M/S，2024年最新高速Clash-Meta免费节点订阅链接">「10月17日」最高速度22.3M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-8-node-share.htm" title="「10月8日」最高速度19.6M/S，2024年最新高速Clash-Meta免费节点订阅链接">「10月8日」最高速度19.6M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-31700.htm" title="怎么去除房间猫留下的气味（如何去除房间里的猫骚味）">怎么去除房间猫留下的气味（如何去除房间里的猫骚味）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-11-free-ssr-subscribe.htm" title="「10月11日」最高速度19.8M/S，2024年最新高速Clash-Meta免费节点订阅链接">「10月11日」最高速度19.8M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-14-free-subscribe-node.htm" title="「12月14日」最高速度22M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月14日」最高速度22M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-23740.htm" title="聚类算法——python实现层次聚类（AGNES）">聚类算法——python实现层次聚类（AGNES）</a></li>
+                        <li class="py-2"><a href="/news/article-32175.htm" title="襄阳市养狗（襄阳市养犬）">襄阳市养狗（襄阳市养犬）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-1-clash-v2ray-ss-ssr.htm" title="「11月1日」最高速度19.4M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月1日」最高速度19.4M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-4-node-share-links.htm" title="「1月4日」最高速度19.3M/S，2025年最新高速Clash-Meta免费节点订阅链接">「1月4日」最高速度19.3M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-30-free-node-subscribe.htm" title="「11月30日」最高速度18M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月30日」最高速度18M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                ClashMetaNode官方节点站 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashmetanode.github.io/news/article-35893.htm" />
+    <title>React功能篇 &#8211; 使用react-i18next进行国际化</title>
+        <meta name="description" content="react-i18next国际化步骤  一.安装依赖 二.配置文件   2.1 新建config.js 2.2 语言文件示例   三.详细使用   3.1 类（class）组件中使用 3.2 函数（f" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFCZ6X6RGC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LFCZ6X6RGC');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>React功能篇 &#8211; 使用react-i18next进行国际化</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li>
+                    <a href="#">关于</a>
+                </li>
+                <li>
+                    <a href="#">联系</a>
+                </li>
+            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <div class="toc"> <h3>react-i18next国际化步骤</h3> <ul> <li><a href="#_1" rel="nofollow">一.安装依赖</a></li> <li><a href="#_7" rel="nofollow">二.配置文件</a></li> <li> <ul> <li><a href="#21_configjs_11" rel="nofollow">2.1 新建config.js</a></li> <li><a href="#22__39" rel="nofollow">2.2 语言文件示例</a></li> </ul> </li> <li><a href="#_83" rel="nofollow">三.详细使用</a></li> <li> <ul> <li><a href="#31_class_91" rel="nofollow">3.1 类（class）组件中使用</a></li> <li><a href="#32_functionHook_107" rel="nofollow">3.2 函数（function）组件或Hook中使用</a></li> <li><a href="#33__126" rel="nofollow">3.3 切换语言功能</a></li> </ul> </li> </ul> </div> </h1> <p>安装react-i18next和 i18next依赖</p> <blockquote> <p>npm install react-i18next i18next<br /> 或<br /> yarn add react-i18next i18next</p> </blockquote> </h1> <p>在src下新建i18n文件夹，以存放国际化相关配置，可根据需要添加相应的语言文件<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230109/7223c62ff9bdae96a75ade0e740090ae.jpg" alt="React功能篇 - 使用react-i18next进行国际化"></p> <h2> <a id="21_configjs_11" rel="nofollow"></a>2.1 新建config.js</h2> <pre><code class="prism language-javascript"><span class="token keyword">import</span> i18n <span class="token keyword">from</span> <span class="token string">'i18next'</span><span class="token punctuation">;</span> <span class="token keyword">import</span> <span class="token punctuation">{<!-- --></span> initReactI18next <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-i18next'</span><span class="token punctuation">;</span> <span class="token comment">//配置中文的配置文件</span> <span class="token keyword">import</span> translation_zh <span class="token keyword">from</span> <span class="token string">'./zh.json'</span><span class="token punctuation">;</span> <span class="token comment">//配置英文的配置文件</span> <span class="token keyword">import</span> translation_en <span class="token keyword">from</span> <span class="token string">'./en.json'</span><span class="token punctuation">;</span>  <span class="token keyword">const</span> resources <span class="token operator">=</span> <span class="token punctuation">{<!-- --></span>   <span class="token literal-property property">en</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>     <span class="token literal-property property">translation</span><span class="token operator">:</span> translation_en   <span class="token punctuation">}</span><span class="token punctuation">,</span>   <span class="token literal-property property">zh</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>     <span class="token literal-property property">translation</span><span class="token operator">:</span> translation_zh   <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>  i18n<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>initReactI18next<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>   resources<span class="token punctuation">,</span>   <span class="token literal-property property">lng</span><span class="token operator">:</span> <span class="token string">'zh'</span><span class="token punctuation">,</span>   <span class="token literal-property property">interpolation</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>     <span class="token literal-property property">escapeValue</span><span class="token operator">:</span> <span class="token boolean">false</span>   <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token keyword">export</span> <span class="token keyword">default</span> i18n<span class="token punctuation">;</span> </code></pre> <h2> <a id="22__39" rel="nofollow"></a>2.2 语言文件示例</h2> <p><strong>en.json</strong></p> <pre><code class="prism language-javascript"><span class="token punctuation">{<!-- --></span>   <span class="token string-property property">"header"</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>     <span class="token string-property property">"register"</span><span class="token operator">:</span> <span class="token string">"Register"</span><span class="token punctuation">,</span>     <span class="token string-property property">"signin"</span><span class="token operator">:</span> <span class="token string">"Sign In"</span><span class="token punctuation">,</span>     <span class="token string-property property">"home"</span><span class="token operator">:</span> <span class="token string">"Home"</span>   <span class="token punctuation">}</span><span class="token punctuation">,</span>   <span class="token string-property property">"footer"</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>     <span class="token string-property property">"detail"</span><span class="token operator">:</span> <span class="token string">"All rights reserved @ React"</span>   <span class="token punctuation">}</span><span class="token punctuation">,</span>   <span class="token string-property property">"home"</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>     <span class="token string-property property">"mainTip"</span><span class="token operator">:</span> <span class="token string">"Im login page"</span>   <span class="token punctuation">}</span><span class="token punctuation">,</span>   <span class="token string-property property">"content"</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>     <span class="token string-property property">"description"</span><span class="token operator">:</span> <span class="token string">"this is a chinese graph"</span>   <span class="token punctuation">}</span> <span class="token punctuation">}</span>  </code></pre> <p><strong>zh.json</strong></p> <pre><code class="prism language-javascript"><span class="token punctuation">{<!-- --></span>   <span class="token string-property property">"header"</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>     <span class="token string-property property">"register"</span><span class="token operator">:</span> <span class="token string">"注册"</span><span class="token punctuation">,</span>     <span class="token string-property property">"signin"</span><span class="token operator">:</span> <span class="token string">"登录"</span><span class="token punctuation">,</span>     <span class="token string-property property">"home"</span><span class="token operator">:</span> <span class="token string">"首页"</span>   <span class="token punctuation">}</span><span class="token punctuation">,</span>   <span class="token string-property property">"footer"</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>     <span class="token string-property property">"detail"</span><span class="token operator">:</span> <span class="token string">"版权所有 @ React"</span>   <span class="token punctuation">}</span><span class="token punctuation">,</span>   <span class="token string-property property">"home"</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>     <span class="token string-property property">"mainTip"</span><span class="token operator">:</span> <span class="token string">"我是登录页面"</span>   <span class="token punctuation">}</span><span class="token punctuation">,</span>   <span class="token string-property property">"content"</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>     <span class="token string-property property">"description"</span><span class="token operator">:</span> <span class="token string">"这是个中文段落"</span>   <span class="token punctuation">}</span> <span class="token punctuation">}</span>  </code></pre> </h1> <blockquote> <p><strong>首先在index.jsx中引入国际化配置文件</strong></p> </blockquote> <pre><code class="prism language-javascript"><span class="token keyword">import</span> <span class="token string">'./i18n/config'</span><span class="token punctuation">;</span> </code></pre> <h2> <a id="31_class_91" rel="nofollow"></a>3.1 类（class）组件中使用</h2> <pre><code class="prism language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{<!-- --></span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span> <span class="token keyword">import</span> <span class="token punctuation">{<!-- --></span> withTranslation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-i18next'</span><span class="token punctuation">;</span> <span class="token keyword">class</span> <span class="token class-name">login</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{<!-- --></span>   <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>     <span class="token keyword">const</span> <span class="token punctuation">{<!-- --></span> t <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>     <span class="token keyword">return</span> <span class="token punctuation">(</span>       <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>         <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span><span class="token function">t</span><span class="token punctuation">(</span><span class="token string">'home.mainTip'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>       <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>     <span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">withTranslation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>login<span class="token punctuation">)</span><span class="token punctuation">;</span> </code></pre> <h2> <a id="32_functionHook_107" rel="nofollow"></a>3.2 函数（function）组件或Hook中使用</h2> <pre><code class="prism language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span> <span class="token keyword">import</span> <span class="token punctuation">{<!-- --></span> useTranslation<span class="token punctuation">,</span>Trans <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-i18next'</span><span class="token punctuation">;</span> <span class="token keyword">function</span> <span class="token function">Example</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>   <span class="token keyword">const</span> <span class="token punctuation">{<!-- --></span> t<span class="token punctuation">,</span> i18n <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useTranslation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token keyword">return</span> <span class="token punctuation">(</span>     <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>     <span class="token comment">//第一种方式</span>       <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span><span class="token function">t</span><span class="token punctuation">(</span><span class="token string">'footer.detail'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>     <span class="token comment">//第二种方式</span>       <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>Trans<span class="token operator">&gt;</span>home<span class="token punctuation">.</span>new_arrival<span class="token operator">&lt;</span><span class="token operator">/</span>Trans<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>   <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token keyword">export</span> <span class="token keyword">default</span> Example<span class="token punctuation">;</span>  </code></pre> <h2> <a id="33__126" rel="nofollow"></a>3.3 切换语言功能</h2> <pre><code class="prism language-javascript"><span class="token function-variable function">renderI18n</span> <span class="token operator">=</span> <span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{<!-- --></span>     <span class="token keyword">const</span> <span class="token punctuation">{<!-- --></span> i18n <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>     <span class="token keyword">return</span> <span class="token punctuation">(</span>       <span class="token operator">&lt;</span>Button onClick<span class="token operator">=</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> i18n<span class="token punctuation">.</span><span class="token function">changeLanguage</span><span class="token punctuation">(</span>i18n<span class="token punctuation">.</span>language <span class="token operator">===</span> <span class="token string">'en'</span> <span class="token operator">?</span> <span class="token string">'zh'</span> <span class="token operator">:</span> <span class="token string">'en'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>         <span class="token punctuation">{<!-- --></span>i18n<span class="token punctuation">.</span>language <span class="token operator">===</span> <span class="token string">'en'</span> <span class="token operator">?</span> <span class="token string">'切换成中文'</span> <span class="token operator">:</span> <span class="token string">'切换成英文'</span><span class="token punctuation">}</span>       <span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">&gt;</span>     <span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token punctuation">}</span><span class="token punctuation">;</span> </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-35417.htm">动物医院的电话是多少号码（动物医院上班）</a></p>
+                                        <p>下一个：<a href="/news/article-35894.htm">MySQL性能优化 &#8211; 别再只会说加索引了_在线工具</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-11-2-free-node-subscribe.htm" title="「11月2日」最高速度19.9M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月2日」最高速度19.9M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-19159.htm" title="福建农林大学动物医学院官网（福建农林大学动物科学学院官网）">福建农林大学动物医学院官网（福建农林大学动物科学学院官网）</a></li>
+                        <li class="py-2"><a href="/news/article-26999.htm" title="ElasticSearch基础学习（SpringBoot集成ES）">ElasticSearch基础学习（SpringBoot集成ES）</a></li>
+                        <li class="py-2"><a href="/news/article-24501.htm" title="如何使用 Redis 缓存">如何使用 Redis 缓存</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-17-clash-node.htm" title="「12月17日」最高速度18.3M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月17日」最高速度18.3M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-11-free-clash.htm" title="「12月11日」最高速度18.2M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月11日」最高速度18.2M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-9-free-v2ray-subscribe.htm" title="「11月9日」最高速度18.2M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月9日」最高速度18.2M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-36974.htm" title="宠物医院价格表 宠物医院价格表图片大全">宠物医院价格表 宠物医院价格表图片大全</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-18-free-clash.htm" title="「10月18日」最高速度21M/S，2024年最新高速Clash-Meta免费节点订阅链接">「10月18日」最高速度21M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-34927.htm" title="C语言中为什么要使用指针">C语言中为什么要使用指针</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                ClashMetaNode官方节点站 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
