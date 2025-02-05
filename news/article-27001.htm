@@ -1,17 +1,45 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
         <link rel="canonical" href="https://clashmetanode.github.io/news/article-27001.htm" />
     <title>基于Python编写一个简单的端口扫描器_python</title>
         <meta name="description" content="目录  1、需要的库 2、获取一个 host 地址 3、循环所有的端口 4、完整脚本   端口扫描是非常实用的，不止用在信息安全方面，日常的运维也用得到。这方面的工具也不要太多，搞过 CTF 的朋友会" />
         <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashMetaNode官方节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashmetanode.github.io/news/article-27001.htm" />
+    <meta property="og:site_name" content="ClashMetaNode官方节点站" />
+    <meta property="og:title" content="基于Python编写一个简单的端口扫描器_python" />
+    <meta property="og:image" content="https://clashmetanode.github.io/uploads/20240413/236a545301b3f5fa5df10de8539d0f3b.webp" />
+        <meta property="og:release_date" content="2024-12-17T10:14:00" />
+    <meta property="og:updated_time" content="2024-12-17T10:14:00" />
+        <meta property="og:description" content="目录  1、需要的库 2、获取一个 host 地址 3、循环所有的端口 4、完整脚本   端口扫描是非常实用的，不止用在信息安全方面，日常的运维也用得到。这方面的工具也不要太多，搞过 CTF 的朋友会" />
+        
     <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <!--theme-style-->
     <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
     <!--//theme-style-->
     <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="基于Python编写一个简单的端口扫描器_python">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
     <!-- script -->
     <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
@@ -109,16 +137,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-7-29-node-share-links.htm" title="「7月29日」最高速度18.8M/S，2024年最新高速Clash-Meta免费节点订阅链接">「7月29日」最高速度18.8M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-30-free-node-subscribe.htm" title="「10月30日」最高速度22.2M/S，2024年最新高速Clash-Meta免费节点订阅链接">「10月30日」最高速度22.2M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-27924.htm" title="动物疫苗接种方法有哪几种图片 动物疫苗接种方法有哪几种图片大全">动物疫苗接种方法有哪几种图片 动物疫苗接种方法有哪几种图片大全</a></li>
+                        <li class="py-2"><a href="/news/article-44885.htm" title="延吉市动物卫生检疫站电话 延吉市动物卫生检疫站电话号码">延吉市动物卫生检疫站电话 延吉市动物卫生检疫站电话号码</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-6-clash-node.htm" title="「11月6日」最高速度22.6M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月6日」最高速度22.6M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-49332.htm" title="全国动物疫苗生产厂家名单最新 全国动物疫苗生产厂家名单最新消息">全国动物疫苗生产厂家名单最新 全国动物疫苗生产厂家名单最新消息</a></li>
+                        <li class="py-2"><a href="/news/article-44884.htm" title="数字的所有数字的递归乘积-JavaScript">数字的所有数字的递归乘积-JavaScript</a></li>
+                        <li class="py-2"><a href="/news/article-24501.htm" title="如何使用 Redis 缓存">如何使用 Redis 缓存</a></li>
                         <li class="py-2"><a href="/free-nodes/2024-12-25-free-high-speed-nodes.htm" title="「12月25日」最高速度18.7M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月25日」最高速度18.7M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-21449.htm" title="动物防疫站打狂犬疫苗免费吗多少钱（动物防疫站打狂犬疫苗免费吗多少钱一针）">动物防疫站打狂犬疫苗免费吗多少钱（动物防疫站打狂犬疫苗免费吗多少钱一针）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-7-23-node-share-links.htm" title="「7月23日」最高速度21.8M/S，2024年最新高速Clash-Meta免费节点订阅链接">「7月23日」最高速度21.8M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-8-22-free-clash-subscribe.htm" title="「8月22日」最高速度22.7M/S，2024年最新高速Clash-Meta免费节点订阅链接">「8月22日」最高速度22.7M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-2-free-v2ray-subscribe.htm" title="「9月2日」最高速度22.7M/S，2024年最新高速Clash-Meta免费节点订阅链接">「9月2日」最高速度22.7M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-4-21-free-node-subscribe-links.htm" title="「4月21日」最高速度20.2M/S，2024年最新高速V2ray/Shadowrocket/SSR/Clash免费节点订阅链接">「4月21日」最高速度20.2M/S，2024年最新高速V2ray/Shadowrocket/SSR/Clash免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-22367.htm" title="猫咪3针疫苗间隔多久打第三针（小猫咪三针疫苗间隔时间）">猫咪3针疫苗间隔多久打第三针（小猫咪三针疫苗间隔时间）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-1-1-free-ssr-node.htm" title="「1月1日」最高速度19.2M/S，2025年最新高速Clash-Meta免费节点订阅链接">「1月1日」最高速度19.2M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-49844.htm" title="python3.5上使用virtualenv创建虚拟环境的坑">python3.5上使用virtualenv创建虚拟环境的坑</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-16-free-shadowrocket-node.htm" title="「11月16日」最高速度18.3M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月16日」最高速度18.3M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-30106.htm" title="动物疫苗招聘信息 动物疫苗招聘信息最新">动物疫苗招聘信息 动物疫苗招聘信息最新</a></li>
                     </ul>
     </div>
 </div>
@@ -130,34 +158,16 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-05/" title="2024-05 归档">2024-05</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2024-04/" title="2024-04 归档">2024-04</a></h4>
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
             </li>
                     </ul>
     </div>

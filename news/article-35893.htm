@@ -1,17 +1,45 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
         <link rel="canonical" href="https://clashmetanode.github.io/news/article-35893.htm" />
     <title>React功能篇 &#8211; 使用react-i18next进行国际化</title>
         <meta name="description" content="react-i18next国际化步骤  一.安装依赖 二.配置文件   2.1 新建config.js 2.2 语言文件示例   三.详细使用   3.1 类（class）组件中使用 3.2 函数（f" />
         <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashMetaNode官方节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashmetanode.github.io/news/article-35893.htm" />
+    <meta property="og:site_name" content="ClashMetaNode官方节点站" />
+    <meta property="og:title" content="React功能篇 &#8211; 使用react-i18next进行国际化" />
+    <meta property="og:image" content="https://clashmetanode.github.io/uploads/20240413/0dca47b06cb3adc15b43464dec079a65.webp" />
+        <meta property="og:release_date" content="2025-01-05T09:42:55" />
+    <meta property="og:updated_time" content="2025-01-05T09:42:55" />
+        <meta property="og:description" content="react-i18next国际化步骤  一.安装依赖 二.配置文件   2.1 新建config.js 2.2 语言文件示例   三.详细使用   3.1 类（class）组件中使用 3.2 函数（f" />
+        
     <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <!--theme-style-->
     <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
     <!--//theme-style-->
     <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="React功能篇 &#8211; 使用react-i18next进行国际化">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
     <!-- script -->
     <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
@@ -109,16 +137,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-11-2-free-node-subscribe.htm" title="「11月2日」最高速度19.9M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月2日」最高速度19.9M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-19159.htm" title="福建农林大学动物医学院官网（福建农林大学动物科学学院官网）">福建农林大学动物医学院官网（福建农林大学动物科学学院官网）</a></li>
-                        <li class="py-2"><a href="/news/article-26999.htm" title="ElasticSearch基础学习（SpringBoot集成ES）">ElasticSearch基础学习（SpringBoot集成ES）</a></li>
-                        <li class="py-2"><a href="/news/article-24501.htm" title="如何使用 Redis 缓存">如何使用 Redis 缓存</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-17-clash-node.htm" title="「12月17日」最高速度18.3M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月17日」最高速度18.3M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-11-free-clash.htm" title="「12月11日」最高速度18.2M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月11日」最高速度18.2M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-9-free-v2ray-subscribe.htm" title="「11月9日」最高速度18.2M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月9日」最高速度18.2M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-36974.htm" title="宠物医院价格表 宠物医院价格表图片大全">宠物医院价格表 宠物医院价格表图片大全</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-18-free-clash.htm" title="「10月18日」最高速度21M/S，2024年最新高速Clash-Meta免费节点订阅链接">「10月18日」最高速度21M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-34927.htm" title="C语言中为什么要使用指针">C语言中为什么要使用指针</a></li>
+                        <li class="py-2"><a href="/news/article-41894.htm" title="用 Python 定义 Schema 并生成 Parquet 文件">用 Python 定义 Schema 并生成 Parquet 文件</a></li>
+                        <li class="py-2"><a href="/news/article-28394.htm" title="GET_FORMAT()函数如何与DATE_FORMAT()和STR_TO_DATE()函数结合使用？">GET_FORMAT()函数如何与DATE_FORMAT()和STR_TO_DATE()函数结合使用？</a></li>
+                        <li class="py-2"><a href="/news/article-33148.htm" title="前端开发：npm install 报错npm ERR! Cannot read property ‘extraneous‘ of undefined的解决方法">前端开发：npm install 报错npm ERR! Cannot read property ‘extraneous‘ of undefined的解决方法</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-14-free-subscribe-node.htm" title="「12月14日」最高速度22M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月14日」最高速度22M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-18-free-v2ray-subscribe.htm" title="「1月18日」最高速度22.1M/S，2025年最新高速Clash-Meta免费节点订阅链接">「1月18日」最高速度22.1M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-35893.htm" title="React功能篇 &#8211; 使用react-i18next进行国际化">React功能篇 &#8211; 使用react-i18next进行国际化</a></li>
+                        <li class="py-2"><a href="/news/article-18622.htm" title="求水杯品牌排行榜,有哪些比较推荐的(水杯品牌排行榜前十名知乎)">求水杯品牌排行榜,有哪些比较推荐的(水杯品牌排行榜前十名知乎)</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-22-free-clash.htm" title="「11月22日」最高速度21.6M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月22日」最高速度21.6M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-23-free-clash.htm" title="「12月23日」最高速度22.9M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月23日」最高速度22.9M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-20533.htm" title="被猫抓了一下红色划痕没破皮有点痛（被猫抓了有红色抓痕,没破皮）">被猫抓了一下红色划痕没破皮有点痛（被猫抓了有红色抓痕,没破皮）</a></li>
                     </ul>
     </div>
 </div>
@@ -130,16 +158,16 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
             </li>
                     </ul>
     </div>

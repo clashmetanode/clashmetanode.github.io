@@ -1,17 +1,45 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
         <link rel="canonical" href="https://clashmetanode.github.io/news/article-39430.htm" />
     <title>async-validator 源码学习笔记validate 方法</title>
         <meta name="description" content="一、validate 介绍 validate 是 async-validator 的核心方法，不仅需要掌握它的使用，也需要了解它的原理。 使用  validator.validate( source," />
         <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashMetaNode官方节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashmetanode.github.io/news/article-39430.htm" />
+    <meta property="og:site_name" content="ClashMetaNode官方节点站" />
+    <meta property="og:title" content="async-validator 源码学习笔记validate 方法" />
+    <meta property="og:image" content="https://clashmetanode.github.io/uploads/20240413/97cb5a0fdb27dc4f8c4a5a08a791abe4.webp" />
+        <meta property="og:release_date" content="2025-01-12T09:58:33" />
+    <meta property="og:updated_time" content="2025-01-12T09:58:33" />
+        <meta property="og:description" content="一、validate 介绍 validate 是 async-validator 的核心方法，不仅需要掌握它的使用，也需要了解它的原理。 使用  validator.validate( source," />
+        
     <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <!--theme-style-->
     <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
     <!--//theme-style-->
     <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="async-validator 源码学习笔记validate 方法">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
     <!-- script -->
     <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
@@ -109,16 +137,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-32656.htm" title="宠物领养须知怎么写范文图片（宠物领养需要带什么证件）">宠物领养须知怎么写范文图片（宠物领养需要带什么证件）</a></li>
-                        <li class="py-2"><a href="/news/article-26076.htm" title="宠物粮食加工厂加盟费多少钱啊一年（开个宠物粮加工厂怎么样）">宠物粮食加工厂加盟费多少钱啊一年（开个宠物粮加工厂怎么样）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-17-free-high-speed-nodes.htm" title="「11月17日」最高速度18.4M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月17日」最高速度18.4M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-20533.htm" title="被猫抓了一下红色划痕没破皮有点痛（被猫抓了有红色抓痕,没破皮）">被猫抓了一下红色划痕没破皮有点痛（被猫抓了有红色抓痕,没破皮）</a></li>
-                        <li class="py-2"><a href="/news/article-19158.htm" title="南京宠物托运飞机（南京机场托运宠物）">南京宠物托运飞机（南京机场托运宠物）</a></li>
-                        <li class="py-2"><a href="/news/article-24500.htm" title="JavaScript相邻元素平均值的数组方法详解">JavaScript相邻元素平均值的数组方法详解</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-1-clash-v2ray-ss-ssr.htm" title="「11月1日」最高速度19.4M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月1日」最高速度19.4M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-19-clash-node-daily-updates.htm" title="「10月19日」最高速度20.2M/S，2024年最新高速Clash-Meta免费节点订阅链接">「10月19日」最高速度20.2M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-14-free-v2ray.htm" title="「10月14日」最高速度20.4M/S，2024年最新高速Clash-Meta免费节点订阅链接">「10月14日」最高速度20.4M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-1-6-clash-node.htm" title="「1月6日」最高速度21.7M/S，2025年最新高速Clash-Meta免费节点订阅链接">「1月6日」最高速度21.7M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-10-clash-node-daily-updates.htm" title="「11月10日」最高速度18.9M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月10日」最高速度18.9M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-5-free-ssr-node.htm" title="「12月5日」最高速度22.6M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月5日」最高速度22.6M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-25136.htm" title="Vue刷新当前页面几种方式">Vue刷新当前页面几种方式</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-26-clash-node-daily-updates.htm" title="「1月26日」最高速度19.4M/S，2025年最新高速Clash-Meta免费节点订阅链接">「1月26日」最高速度19.4M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-26538.htm" title="docker故障大全">docker故障大全</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-15-node-share.htm" title="「11月15日」最高速度18.8M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月15日」最高速度18.8M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-22368.htm" title="厦门宠物狗免费赠送 厦门宠物狗免费赠送活动">厦门宠物狗免费赠送 厦门宠物狗免费赠送活动</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-30-free-high-speed-nodes.htm" title="「12月30日」最高速度20.3M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月30日」最高速度20.3M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-30748.htm" title="天津宠物领养中心电话多少 天津宠物领养中心电话多少号">天津宠物领养中心电话多少 天津宠物领养中心电话多少号</a></li>
+                        <li class="py-2"><a href="/news/article-43873.htm" title="SQL 查询执行顺序">SQL 查询执行顺序</a></li>
                     </ul>
     </div>
 </div>
@@ -130,16 +158,16 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">45</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
             </li>
                     </ul>
     </div>
