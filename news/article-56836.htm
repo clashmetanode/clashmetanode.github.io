@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashmetanode.github.io/news/article-56836.htm" />
+    <title>springboot docker 分层打包镜像，精减变动体积</title>
+        <meta name="description" content="Dockerfile FROM openjdk:8-jdk-alpine as basic VOLUME /tmp COPY BOOT-INF/lib /app/lib COPY META-INF /" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashMetaNode官方节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashmetanode.github.io/news/article-56836.htm" />
+    <meta property="og:site_name" content="ClashMetaNode官方节点站" />
+    <meta property="og:title" content="springboot docker 分层打包镜像，精减变动体积" />
+    <meta property="og:image" content="https://clashmetanode.github.io/uploads/20240413/b8bebda4fc3bafdf45f1d721bed3638c.webp" />
+        <meta property="og:release_date" content="2025-02-15T05:21:32" />
+    <meta property="og:updated_time" content="2025-02-15T05:21:32" />
+        <meta property="og:description" content="Dockerfile FROM openjdk:8-jdk-alpine as basic VOLUME /tmp COPY BOOT-INF/lib /app/lib COPY META-INF /" />
+        
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="springboot docker 分层打包镜像，精减变动体积">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFCZ6X6RGC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LFCZ6X6RGC');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>springboot docker 分层打包镜像，精减变动体积</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/client.htm">客户端</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>Dockerfile</p> <pre><code>FROM openjdk:8-jdk-alpine as basic VOLUME /tmp COPY BOOT-INF/lib /app/lib COPY META-INF /app/META-INF COPY BOOT-INF/classes /app/classes  FROM openjdk:8-jdk-alpine COPY --from=basic /app/lib /app/lib COPY --from=basic /app/META-INF /app/META-INF COPY --from=basic /app/classes /app/classes  ENTRYPOINT java -XX:MaxRAMFraction=2 -cp app/classes:app/lib/* com.example.demo.DemoApplication</code></pre> <p>构建脚本</p> <pre><code>repository="harbor.hknaruto.com/library/training"  mvn clean package -Dmaven.test.skip=true -T4 mkdir target/dependency cp Dockerfile target/dependency (   cd target/dependency   jar -xf ../*.jar   docker build -t "$repository":"$(git branch | awk '{print $2}')"."$(git rev-parse --short HEAD)" .   # 清理老的镜像，本地保留3个最近构建的镜像，从第4个开始，删除本地镜像   docker images | grep "$repository" | tail -n +4 | awk '{print $3}' | xargs -i docker rmi {} )</code></pre> <p>第一次构建效果</p> <pre><code>$ docker history harbor.hknaruto.com/library/training:master.30b943a IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT f5d2de97b288        12 seconds ago      /bin/sh -c #(nop)  ENTRYPOINT ["/bin/sh" "-c…   0B                   a50c1ee7d59c        12 seconds ago      /bin/sh -c #(nop) COPY dir:590e06da69bc4b6fc…   10.8kB               5b91b3624e0a        12 seconds ago      /bin/sh -c #(nop) COPY dir:34d1e4a296310a6ec…   2.17kB               52dcee3f3e35        4 minutes ago       /bin/sh -c #(nop) COPY dir:94d828a4ed8596549…   20MB                 a3562aa0b991        2 years ago         /bin/sh -c set -x  &amp;&amp; apk add --no-cache   o…   99.3MB               &lt;missing&gt;           2 years ago         /bin/sh -c #(nop)  ENV JAVA_ALPINE_VERSION=8…   0B                   &lt;missing&gt;           2 years ago         /bin/sh -c #(nop)  ENV JAVA_VERSION=8u212       0B                   &lt;missing&gt;           2 years ago         /bin/sh -c #(nop)  ENV PATH=/usr/local/sbin:…   0B                   &lt;missing&gt;           2 years ago         /bin/sh -c #(nop)  ENV JAVA_HOME=/usr/lib/jv…   0B                   &lt;missing&gt;           2 years ago         /bin/sh -c {   echo '#!/bin/sh';   echo 'set…   87B                  &lt;missing&gt;           2 years ago         /bin/sh -c #(nop)  ENV LANG=C.UTF-8             0B                   &lt;missing&gt;           2 years ago         /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B                   &lt;missing&gt;           2 years ago         /bin/sh -c #(nop) ADD file:a86aea1f3a7d68f6a…   5.53MB</code></pre> <p>第二次构建效果</p> <pre><code>$ docker history harbor.hknaruto.com/library/training:master.30b943a IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT abc62088b1b6        1 second ago        /bin/sh -c #(nop)  ENTRYPOINT ["/bin/sh" "-c…   0B                   61cf540de3ff        1 second ago        /bin/sh -c #(nop) COPY dir:d4dc9a24cb84bd616…   10.8kB               5b91b3624e0a        2 minutes ago       /bin/sh -c #(nop) COPY dir:34d1e4a296310a6ec…   2.17kB               52dcee3f3e35        5 minutes ago       /bin/sh -c #(nop) COPY dir:94d828a4ed8596549…   20MB                 a3562aa0b991        2 years ago         /bin/sh -c set -x  &amp;&amp; apk add --no-cache   o…   99.3MB               &lt;missing&gt;           2 years ago         /bin/sh -c #(nop)  ENV JAVA_ALPINE_VERSION=8…   0B                   &lt;missing&gt;           2 years ago         /bin/sh -c #(nop)  ENV JAVA_VERSION=8u212       0B                   &lt;missing&gt;           2 years ago         /bin/sh -c #(nop)  ENV PATH=/usr/local/sbin:…   0B                   &lt;missing&gt;           2 years ago         /bin/sh -c #(nop)  ENV JAVA_HOME=/usr/lib/jv…   0B                   &lt;missing&gt;           2 years ago         /bin/sh -c {   echo '#!/bin/sh';   echo 'set…   87B                  &lt;missing&gt;           2 years ago         /bin/sh -c #(nop)  ENV LANG=C.UTF-8             0B                   &lt;missing&gt;           2 years ago         /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B                   &lt;missing&gt;           2 years ago         /bin/sh -c #(nop) ADD file:a86aea1f3a7d68f6a…   5.53MB</code></pre> <p>其中最大的lib目录由于没有发生变动，并没有执行更新。</p> <p>注意，如果不采用COPY --from 方式，即使lib目录没有更新，也会重新创建新的层！导致镜像变动部分仍然很大。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-56279.htm">小型宠物粮食加工设备价格多少 小型宠物粮食加工设备价格多少钱</a></p>
+                                        <p>下一个：<a href="/news/article-56837.htm">孕妇被猫抓了一下出了点血要打疫苗吗有事吗（孕妇被猫抓了一下出了点血要打疫苗吗有事吗）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-12-15-node-share.htm" title="「12月15日」最高速度23M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月15日」最高速度23M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-17-free-v2ray.htm" title="「2月17日」最高速度22.6M/S，2025年最新高速Clash-Meta免费节点订阅链接">「2月17日」最高速度22.6M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-9-free-clash-subscribe.htm" title="「2月9日」最高速度18.9M/S，2025年最新高速Clash-Meta免费节点订阅链接">「2月9日」最高速度18.9M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-18622.htm" title="求水杯品牌排行榜,有哪些比较推荐的(水杯品牌排行榜前十名知乎)">求水杯品牌排行榜,有哪些比较推荐的(水杯品牌排行榜前十名知乎)</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-3-free-shadowrocket-node.htm" title="「1月3日」最高速度18.1M/S，2025年最新高速Clash-Meta免费节点订阅链接">「1月3日」最高速度18.1M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-38933.htm" title="动物疫苗公司排名前十有哪些企业 动物疫苗公司排名前十有哪些企业上市">动物疫苗公司排名前十有哪些企业 动物疫苗公司排名前十有哪些企业上市</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-7-free-high-speed-nodes.htm" title="「11月7日」最高速度18.1M/S，2024年最新高速Clash-Meta免费节点订阅链接">「11月7日」最高速度18.1M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-26999.htm" title="ElasticSearch基础学习（SpringBoot集成ES）">ElasticSearch基础学习（SpringBoot集成ES）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-8-clash-node.htm" title="「1月8日」最高速度19.2M/S，2025年最新高速Clash-Meta免费节点订阅链接">「1月8日」最高速度19.2M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-49844.htm" title="python3.5上使用virtualenv创建虚拟环境的坑">python3.5上使用virtualenv创建虚拟环境的坑</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">51</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                ClashMetaNode官方节点站 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
