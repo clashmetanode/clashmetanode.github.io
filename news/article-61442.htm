@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashmetanode.github.io/news/article-61442.htm" />
+    <title>HTML如何在图片上添加内容（如文字，菜单栏，按钮等）</title>
+        <meta name="description" content="演示效果 &nbsp; 最近做的一个效果是网页头部有一张大图，菜单栏漂浮在图片之上。我看到网上讲的很简单，大致原理就是图片定为相对定位，文字定为绝对定位即可。不过我实现的并不顺利，花了几个小时才让菜单" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashMetaNode官方节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashmetanode.github.io/news/article-61442.htm" />
+    <meta property="og:site_name" content="ClashMetaNode官方节点站" />
+    <meta property="og:title" content="HTML如何在图片上添加内容（如文字，菜单栏，按钮等）" />
+    <meta property="og:image" content="https://clashmetanode.github.io/uploads/20240413/a17c7e927c2e43191ea4c908b96343b5.webp" />
+        <meta property="og:release_date" content="2025-02-23T09:45:22" />
+    <meta property="og:updated_time" content="2025-02-23T09:45:22" />
+        <meta property="og:description" content="演示效果 &nbsp; 最近做的一个效果是网页头部有一张大图，菜单栏漂浮在图片之上。我看到网上讲的很简单，大致原理就是图片定为相对定位，文字定为绝对定位即可。不过我实现的并不顺利，花了几个小时才让菜单" />
+        
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="HTML如何在图片上添加内容（如文字，菜单栏，按钮等）">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFCZ6X6RGC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LFCZ6X6RGC');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>HTML如何在图片上添加内容（如文字，菜单栏，按钮等）</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/client.htm">客户端</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> </h1> <p><span style="font-size:18px"><a target="_blank" href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://115.29.45.115/ifox/"  rel="nofollow">演示效果</a></span></p> <p><span style="font-size:24px"><span style="font-size:14px">&nbsp; 最近做的一个效果是网页头部有一张大图，菜单栏漂浮在图片之上。我看到网上讲的很简单，大致原理就是图片定为相对定位，文字定为绝对定位即可。不过我实现的并不顺利，花了几个小时才让菜单栏漂浮在图片上。以下是效果图。</span></span></p> <h2>首先布好局：</h2> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220609/1a05c21111c221cf5d7809ac070c7d15.jpg" alt="HTML如何在图片上添加内容（如文字，菜单栏，按钮等）"></p> <p><span style="font-size:14px">请注意到此时菜单栏和文字并没有在图片之上，我给菜单栏设置的背景色是半透明的黑色，它若成功漂浮在图片之上，会是半透明的。</span></p> <p><span style="font-size:14px">现在为图片和文字的盒子.imgw添加位置属性：position:relative;（相对定位）</span></p> <p><span style="font-size:14px">为文字的盒子.words添加：position:absolute;(绝对定位)</span></p> <p><span style="font-size:14px">也为菜单栏nav添加：<span style="font-size:14px">position:absolute;(绝对定位)</span></span></p> <p><span style="font-size:14px"><span style="font-size:14px">这三个定位很重要！！<br /></span></span></p> <p><span style="font-size:14px">此时效果如下：</span></p> <p><span style="font-size:14px"><img decoding="async" src="http://img.555519.xyz/uploads3/20220609/cb00ab9cfdd4d3236f5acbe1df7a1972.jpg" alt="HTML如何在图片上添加内容（如文字，菜单栏，按钮等）"></span></p> <p><span style="font-size:14px">定位完了以后可以看到菜单栏不见了，文字也没有漂浮在图片上。不要着急，菜单栏只是被盖住了，现在给菜单栏设置z-index:10，</span></p> <p><span style="font-size:14px">文字为它设置距离top:50%,距离left:30%。<br /></span></p> <p></p> <p><span style="font-size:14px"><img decoding="async" src="http://img.555519.xyz/uploads3/20220609/6a510f5c01dc2aac818858b8b4ac2e94.jpg" alt="HTML如何在图片上添加内容（如文字，菜单栏，按钮等）"></span></p> <p><span style="font-size:14px">这里是完整代码：</span></p> <p><span style="font-size:14px"></span></p> <pre><code class="language-html">&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; 	&lt;title&gt;&lt;/title&gt; 	&lt;meta charset = "utf-8"&gt; &lt;/head&gt; &lt;style type="text/css"&gt; 	nav{ 		width: 100%; 		height: 60px;	 		background: rgba(0,0,0,.3); 		position: absolute; 		z-index: 10; 	} 	nav ul{ 		list-style: none; 		margin: 0; 		padding: 0; 	} 	nav ul li{ 		text-align: center; 		float: left; 		line-height: 60px; 	} 	nav ul li a{ 		width: 100px; 		color: #fff; 		font-size: 20px; 		font-weight: 600; 		display: block; 	} 	nav ul li a:hover,nav ul li a:visited{ 		text-decoration: none; 		background: rgba(0,0,0,.5); 		color: #fff; 	} 	.words{font-size: 40px; 			letter-spacing: 10px; 			position: absolute; 			top:50%; 			left: 30%;} 	.imgw{position: relative;} &lt;/style&gt; &lt;body&gt; 	&lt;nav&gt; 		&lt;ul&gt; 			&lt;li class="active"&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt; 			&lt;li&gt;&lt;a href="#"&gt;服务&lt;/a&gt;&lt;/li&gt; 			&lt;li&gt;&lt;a href="#"&gt;支持&lt;/a&gt;&lt;/li&gt; 			&lt;li&gt;&lt;a href="#"&gt;博客&lt;/a&gt;&lt;/li&gt; 			&lt;li&gt;&lt;a href="#"&gt;下载&lt;/a&gt;&lt;/li&gt; 		&lt;/ul&gt; 	&lt;/nav&gt; 	&lt;div class="imgw"&gt; 		&lt;img src="images/header1.png" alt="HTML如何在图片上添加内容（如文字，菜单栏，按钮等）" alt= "" width="100%"&gt; 		&lt;div class="words"&gt;飞流太萌了&lt;/div&gt; 	&lt;/div&gt; &lt;/body&gt; &lt;/html&gt;</code></pre> <p></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-61441.htm">二、Kotlin标准函数和静态函数</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-43874.htm" title="宠物医院美团好评模板 宠物医院美团好评模板图片">宠物医院美团好评模板 宠物医院美团好评模板图片</a></li>
+                        <li class="py-2"><a href="/news/article-24500.htm" title="JavaScript相邻元素平均值的数组方法详解">JavaScript相邻元素平均值的数组方法详解</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-5-free-ssr-node.htm" title="「2月5日」最高速度18.5M/S，2025年最新高速Clash-Meta免费节点订阅链接">「2月5日」最高速度18.5M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-52984.htm" title="宠物美容师证怎么考（宠物美容师证怎么考知乎）">宠物美容师证怎么考（宠物美容师证怎么考知乎）</a></li>
+                        <li class="py-2"><a href="/news/article-19617.htm" title="开一个宠物店大概一年营业额多少钱（开一家宠物店费用）">开一个宠物店大概一年营业额多少钱（开一家宠物店费用）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-4-free-clash-subscribe.htm" title="「2月4日」最高速度20.8M/S，2025年最新高速Clash-Meta免费节点订阅链接">「2月4日」最高速度20.8M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-34565.htm" title="避坑！js正确地使用fill()初始化二维数组_在线工具">避坑！js正确地使用fill()初始化二维数组_在线工具</a></li>
+                        <li class="py-2"><a href="/news/article-30107.htm" title="农大动物医院专家名单（农大动物医院电话号码）">农大动物医院专家名单（农大动物医院电话号码）</a></li>
+                        <li class="py-2"><a href="/news/article-36481.htm" title="JPA写原生SQL">JPA写原生SQL</a></li>
+                        <li class="py-2"><a href="/news/article-41894.htm" title="用 Python 定义 Schema 并生成 Parquet 文件">用 Python 定义 Schema 并生成 Parquet 文件</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">69</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                ClashMetaNode官方节点站 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashmetanode.github.io/news/article-61441.htm" />
+    <title>二、Kotlin标准函数和静态函数</title>
+        <meta name="description" content="1、标准函数with、run和apply let : 函数，配合?.进行辅助判空处理 with :  连续调用同一个对象的多个方法，让代码变得更加简洁   val list = listOfNotNu" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashMetaNode官方节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashmetanode.github.io/news/article-61441.htm" />
+    <meta property="og:site_name" content="ClashMetaNode官方节点站" />
+    <meta property="og:title" content="二、Kotlin标准函数和静态函数" />
+    <meta property="og:image" content="https://clashmetanode.github.io/uploads/20240413/36749d9a49d97b688b5017abac5b10bb.webp" />
+        <meta property="og:release_date" content="2025-02-23T09:45:22" />
+    <meta property="og:updated_time" content="2025-02-23T09:45:22" />
+        <meta property="og:description" content="1、标准函数with、run和apply let : 函数，配合?.进行辅助判空处理 with :  连续调用同一个对象的多个方法，让代码变得更加简洁   val list = listOfNotNu" />
+        
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="二、Kotlin标准函数和静态函数">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFCZ6X6RGC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LFCZ6X6RGC');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>二、Kotlin标准函数和静态函数</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/client.htm">客户端</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h4> <a id="1withrunapply_0" rel="nofollow"></a>1、标准函数with、run和apply</h4> <pre><code>let : 函数，配合?.进行辅助判空处理 with :  连续调用同一个对象的多个方法，让代码变得更加简洁 </code></pre> <pre><code class="prism language-kotlin"> <span class="token keyword">val</span> list <span class="token operator">=</span> <span class="token function">listOfNotNull</span><span class="token punctuation">(</span><span class="token string">"apple"</span><span class="token punctuation">,</span><span class="token string">"banana"</span><span class="token punctuation">,</span><span class="token string">"orange"</span><span class="token punctuation">,</span><span class="token string">"li"</span><span class="token punctuation">)</span>     <span class="token comment">//正常处理</span>     <span class="token keyword">val</span> stringBuilder <span class="token operator">=</span> <span class="token function">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     stringBuilder<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"start eat fruit.\n"</span><span class="token punctuation">)</span>     <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token keyword">in</span> list<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>         stringBuilder<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">".\n"</span><span class="token punctuation">)</span>     <span class="token punctuation">}</span>     stringBuilder<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"start eat fruit end.\n"</span><span class="token punctuation">)</span>     <span class="token keyword">val</span> result <span class="token operator">=</span> stringBuilder<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token function">println</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>     <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"------------------------with----------------------------"</span><span class="token punctuation">)</span>     <span class="token comment">//with函数</span>     <span class="token keyword">val</span> results <span class="token operator">=</span> <span class="token function">with</span><span class="token punctuation">(</span><span class="token function">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>         <span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"start eat fruit.\n"</span><span class="token punctuation">)</span>         <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token keyword">in</span> list<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>             <span class="token function">append</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">".\n"</span><span class="token punctuation">)</span>         <span class="token punctuation">}</span>         <span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"start eat fruit end.\n"</span><span class="token punctuation">)</span>         <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token punctuation">}</span>     <span class="token function">println</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span> </code></pre> <pre><code>run : 和with用法场景非常类似 </code></pre> <pre><code class="prism language-kotlin">  <span class="token keyword">val</span> result1 <span class="token operator">=</span> <span class="token function">StringBuffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">run</span> <span class="token punctuation">{<!-- --></span>         <span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"start eat fruit.\n"</span><span class="token punctuation">)</span>         <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token keyword">in</span> list<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>             <span class="token function">append</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">".\n"</span><span class="token punctuation">)</span>         <span class="token punctuation">}</span>         <span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"start eat fruit end.\n"</span><span class="token punctuation">)</span>         <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token punctuation">}</span> </code></pre> <pre><code>apply:和run类似，在对象上调用，只能有一个Lambda表达式，也会在Lambda表达式中提供调用对象的上下文，无法指定返回值 </code></pre> <pre><code class="prism language-kotlin">    <span class="token keyword">val</span> result2 <span class="token operator">=</span> <span class="token function">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">apply</span> <span class="token punctuation">{<!-- --></span>         <span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"start eat fruit.\n"</span><span class="token punctuation">)</span>         <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token keyword">in</span> list<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>             <span class="token function">append</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">".\n"</span><span class="token punctuation">)</span>         <span class="token punctuation">}</span>         <span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"start eat fruit end.\n"</span><span class="token punctuation">)</span>     <span class="token punctuation">}</span>     <span class="token function">println</span><span class="token punctuation">(</span>result2<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> </code></pre> <pre><code>Android中跳转使用 </code></pre> <pre><code class="prism language-kotlin">    <span class="token keyword">companion</span> <span class="token keyword">object</span><span class="token punctuation">{<!-- --></span>         <span class="token keyword">fun</span> <span class="token function">gotoActivity</span><span class="token punctuation">(</span>context<span class="token operator">:</span> Context <span class="token punctuation">,</span> <span class="token keyword">data</span> <span class="token operator">:</span> String<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>             <span class="token keyword">val</span>  intent <span class="token operator">=</span> <span class="token function">Intent</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span>SecondActivity <span class="token operator">::</span> <span class="token keyword">class</span><span class="token punctuation">.</span>java<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">apply</span> <span class="token punctuation">{<!-- --></span>                  <span class="token function">putExtra</span><span class="token punctuation">(</span><span class="token string">"data1"</span><span class="token punctuation">,</span><span class="token keyword">data</span><span class="token punctuation">)</span>                 <span class="token function">putExtra</span><span class="token punctuation">(</span><span class="token string">"data2"</span><span class="token punctuation">,</span><span class="token keyword">data</span><span class="token punctuation">)</span>                 <span class="token function">putExtra</span><span class="token punctuation">(</span><span class="token string">"data3"</span><span class="token punctuation">,</span><span class="token keyword">data</span><span class="token punctuation">)</span>                 <span class="token function">putExtra</span><span class="token punctuation">(</span><span class="token string">"data4"</span><span class="token punctuation">,</span><span class="token keyword">data</span><span class="token punctuation">)</span>                 <span class="token function">putExtra</span><span class="token punctuation">(</span><span class="token string">"data5"</span><span class="token punctuation">,</span><span class="token keyword">data</span><span class="token punctuation">)</span>             <span class="token punctuation">}</span>             context<span class="token punctuation">.</span><span class="token function">startActivity</span><span class="token punctuation">(</span>intent<span class="token punctuation">)</span>         <span class="token punctuation">}</span>     <span class="token punctuation">}</span> </code></pre> <h4> <a id="2_71" rel="nofollow"></a>2、静态方法</h4> <pre><code>静态方法又叫类方法，是那种不用创建实例就能调用的方法，在java中，用static修饰的方法就是静态方法，在Kotlin中，如果是定义工具类，就建议使用单例类来实现相关方法 </code></pre> <pre><code class="prism language-kotlin"><span class="token keyword">object</span> Utils <span class="token punctuation">{<!-- --></span>     <span class="token keyword">fun</span> <span class="token function">doAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>         <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"静态方法"</span><span class="token punctuation">)</span>     <span class="token punctuation">}</span> <span class="token punctuation">}</span>   <span class="token comment">//调用</span>    Utils<span class="token punctuation">.</span><span class="token function">doAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> </code></pre> <pre><code>因为使用单例类，会使所有的方法变成静态方法，如果一个类中只需要一个方法变成单例模式，需要在这个方法外面包companion object这个函数，就实现单例类了 </code></pre> <pre><code class="prism language-kotlin">    <span class="token keyword">companion</span> <span class="token keyword">object</span><span class="token punctuation">{<!-- --></span>         <span class="token keyword">fun</span> <span class="token function">doAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>             <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"静态方法"</span><span class="token punctuation">)</span>         <span class="token punctuation">}</span>     <span class="token punctuation">}</span> </code></pre> <pre><code>companion object这个关键字会在类中内部创建一个伴生类，而doAction就是定义在伴生类里面的实例方法。所以，kotlin中没有直接定义静态方法的关键字，但是提供了一些语法特性来支持类似静态方法的调用的写法 </code></pre> <h4> <a id="3_96" rel="nofollow"></a>3、静态方法实现</h4> <pre><code>两种方式;注解和顶层方法 1）注解 上述的方法，都无法在java中以静态方法方式调用，如果在 companion object中的静态方法上加上@JvmStatic注解，kotlin编译器就能编译成真正的静态方法 </code></pre> <pre><code class="prism language-kotlin">	<span class="token comment">// @JvmStatic 只能加载单例类和companion object的方法上，如果加在普通方法上，会报错</span>     <span class="token keyword">companion</span> <span class="token keyword">object</span><span class="token punctuation">{<!-- --></span>         <span class="token annotation builtin">@JvmStatic</span>         <span class="token keyword">fun</span> <span class="token function">doAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>             <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"静态方法"</span><span class="token punctuation">)</span>         <span class="token punctuation">}</span>     <span class="token punctuation">}</span> </code></pre> <pre><code>2）顶层方法 	直接创建File类，在里面定义方法 	New--Kotlin--输入类名--选择File--OK </code></pre> <pre><code class="prism language-kotlin"> <span class="token keyword">fun</span> <span class="token function">doAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>     <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"静态方法"</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>  <span class="token keyword">fun</span> <span class="token function">doAction1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>     <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"静态方法"</span><span class="token punctuation">)</span> <span class="token punctuation">}</span> </code></pre> <pre><code>在Kotlin方法中，直接可以调用，在java中，需要类名.方法调用 </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-60850.htm">动物医院社会实践报告范文 动物医院社会实践报告范文怎么写</a></p>
+                                        <p>下一个：<a href="/news/article-61442.htm">HTML如何在图片上添加内容（如文字，菜单栏，按钮等）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-35893.htm" title="React功能篇 &#8211; 使用react-i18next进行国际化">React功能篇 &#8211; 使用react-i18next进行国际化</a></li>
+                        <li class="py-2"><a href="/news/article-31700.htm" title="怎么去除房间猫留下的气味（如何去除房间里的猫骚味）">怎么去除房间猫留下的气味（如何去除房间里的猫骚味）</a></li>
+                        <li class="py-2"><a href="/news/article-44885.htm" title="延吉市动物卫生检疫站电话 延吉市动物卫生检疫站电话号码">延吉市动物卫生检疫站电话 延吉市动物卫生检疫站电话号码</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-10-node-share-links.htm" title="「2月10日」最高速度22.7M/S，2025年最新高速Clash-Meta免费节点订阅链接">「2月10日」最高速度22.7M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-15-node-share.htm" title="「12月15日」最高速度23M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月15日」最高速度23M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-34567.htm" title="动物活疫苗对人的伤害有哪些呢图片（动物活疫苗与死疫苗的区别）">动物活疫苗对人的伤害有哪些呢图片（动物活疫苗与死疫苗的区别）</a></li>
+                        <li class="py-2"><a href="/news/article-20072.htm" title="济南宠物领养微信群号（济南宠物领养微信群号是什么）">济南宠物领养微信群号（济南宠物领养微信群号是什么）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-21-clash-node-daily-updates.htm" title="「2月21日」最高速度22.2M/S，2025年最新高速Clash-Meta免费节点订阅链接">「2月21日」最高速度22.2M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-5-free-ssr-node.htm" title="「2月5日」最高速度18.5M/S，2025年最新高速Clash-Meta免费节点订阅链接">「2月5日」最高速度18.5M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-48813.htm" title="丹阳宠物免费领养在哪里办理（丹阳宠物网）">丹阳宠物免费领养在哪里办理（丹阳宠物网）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">69</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                ClashMetaNode官方节点站 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
