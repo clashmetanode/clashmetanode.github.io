@@ -122,6 +122,7 @@
                   				  				  				<div id="content_views" class="htmledit_views"> </h1> <p><span style="font-size:18px"><a target="_blank" href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://115.29.45.115/ifox/"  rel="nofollow">演示效果</a></span></p> <p><span style="font-size:24px"><span style="font-size:14px">&nbsp; 最近做的一个效果是网页头部有一张大图，菜单栏漂浮在图片之上。我看到网上讲的很简单，大致原理就是图片定为相对定位，文字定为绝对定位即可。不过我实现的并不顺利，花了几个小时才让菜单栏漂浮在图片上。以下是效果图。</span></span></p> <h2>首先布好局：</h2> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220609/1a05c21111c221cf5d7809ac070c7d15.jpg" alt="HTML如何在图片上添加内容（如文字，菜单栏，按钮等）"></p> <p><span style="font-size:14px">请注意到此时菜单栏和文字并没有在图片之上，我给菜单栏设置的背景色是半透明的黑色，它若成功漂浮在图片之上，会是半透明的。</span></p> <p><span style="font-size:14px">现在为图片和文字的盒子.imgw添加位置属性：position:relative;（相对定位）</span></p> <p><span style="font-size:14px">为文字的盒子.words添加：position:absolute;(绝对定位)</span></p> <p><span style="font-size:14px">也为菜单栏nav添加：<span style="font-size:14px">position:absolute;(绝对定位)</span></span></p> <p><span style="font-size:14px"><span style="font-size:14px">这三个定位很重要！！<br /></span></span></p> <p><span style="font-size:14px">此时效果如下：</span></p> <p><span style="font-size:14px"><img decoding="async" src="http://img.555519.xyz/uploads3/20220609/cb00ab9cfdd4d3236f5acbe1df7a1972.jpg" alt="HTML如何在图片上添加内容（如文字，菜单栏，按钮等）"></span></p> <p><span style="font-size:14px">定位完了以后可以看到菜单栏不见了，文字也没有漂浮在图片上。不要着急，菜单栏只是被盖住了，现在给菜单栏设置z-index:10，</span></p> <p><span style="font-size:14px">文字为它设置距离top:50%,距离left:30%。<br /></span></p> <p></p> <p><span style="font-size:14px"><img decoding="async" src="http://img.555519.xyz/uploads3/20220609/6a510f5c01dc2aac818858b8b4ac2e94.jpg" alt="HTML如何在图片上添加内容（如文字，菜单栏，按钮等）"></span></p> <p><span style="font-size:14px">这里是完整代码：</span></p> <p><span style="font-size:14px"></span></p> <pre><code class="language-html">&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; 	&lt;title&gt;&lt;/title&gt; 	&lt;meta charset = "utf-8"&gt; &lt;/head&gt; &lt;style type="text/css"&gt; 	nav{ 		width: 100%; 		height: 60px;	 		background: rgba(0,0,0,.3); 		position: absolute; 		z-index: 10; 	} 	nav ul{ 		list-style: none; 		margin: 0; 		padding: 0; 	} 	nav ul li{ 		text-align: center; 		float: left; 		line-height: 60px; 	} 	nav ul li a{ 		width: 100px; 		color: #fff; 		font-size: 20px; 		font-weight: 600; 		display: block; 	} 	nav ul li a:hover,nav ul li a:visited{ 		text-decoration: none; 		background: rgba(0,0,0,.5); 		color: #fff; 	} 	.words{font-size: 40px; 			letter-spacing: 10px; 			position: absolute; 			top:50%; 			left: 30%;} 	.imgw{position: relative;} &lt;/style&gt; &lt;body&gt; 	&lt;nav&gt; 		&lt;ul&gt; 			&lt;li class="active"&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt; 			&lt;li&gt;&lt;a href="#"&gt;服务&lt;/a&gt;&lt;/li&gt; 			&lt;li&gt;&lt;a href="#"&gt;支持&lt;/a&gt;&lt;/li&gt; 			&lt;li&gt;&lt;a href="#"&gt;博客&lt;/a&gt;&lt;/li&gt; 			&lt;li&gt;&lt;a href="#"&gt;下载&lt;/a&gt;&lt;/li&gt; 		&lt;/ul&gt; 	&lt;/nav&gt; 	&lt;div class="imgw"&gt; 		&lt;img src="images/header1.png" alt="HTML如何在图片上添加内容（如文字，菜单栏，按钮等）" alt= "" width="100%"&gt; 		&lt;div class="words"&gt;飞流太萌了&lt;/div&gt; 	&lt;/div&gt; &lt;/body&gt; &lt;/html&gt;</code></pre> <p></p> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-61441.htm">二、Kotlin标准函数和静态函数</a></p>
+                                        <p>下一个：<a href="/news/article-62033.htm">违反宠物领养协议可以报警吗有用吗（违反宠物领养协议可以报警吗有用吗安全吗）</a></p>
                                     </div>
                                     </div>
                     <div class="col-md-3">
@@ -131,16 +132,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-43874.htm" title="宠物医院美团好评模板 宠物医院美团好评模板图片">宠物医院美团好评模板 宠物医院美团好评模板图片</a></li>
-                        <li class="py-2"><a href="/news/article-24500.htm" title="JavaScript相邻元素平均值的数组方法详解">JavaScript相邻元素平均值的数组方法详解</a></li>
+                        <li class="py-2"><a href="/news/article-37938.htm" title="宠物疫苗多少钱一次（宠物疫苗一般多少钱一只）">宠物疫苗多少钱一次（宠物疫苗一般多少钱一只）</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-2-5-free-ssr-node.htm" title="「2月5日」最高速度18.5M/S，2025年最新高速Clash-Meta免费节点订阅链接">「2月5日」最高速度18.5M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-52984.htm" title="宠物美容师证怎么考（宠物美容师证怎么考知乎）">宠物美容师证怎么考（宠物美容师证怎么考知乎）</a></li>
                         <li class="py-2"><a href="/news/article-19617.htm" title="开一个宠物店大概一年营业额多少钱（开一家宠物店费用）">开一个宠物店大概一年营业额多少钱（开一家宠物店费用）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-2-4-free-clash-subscribe.htm" title="「2月4日」最高速度20.8M/S，2025年最新高速Clash-Meta免费节点订阅链接">「2月4日」最高速度20.8M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-34565.htm" title="避坑！js正确地使用fill()初始化二维数组_在线工具">避坑！js正确地使用fill()初始化二维数组_在线工具</a></li>
-                        <li class="py-2"><a href="/news/article-30107.htm" title="农大动物医院专家名单（农大动物医院电话号码）">农大动物医院专家名单（农大动物医院电话号码）</a></li>
-                        <li class="py-2"><a href="/news/article-36481.htm" title="JPA写原生SQL">JPA写原生SQL</a></li>
-                        <li class="py-2"><a href="/news/article-41894.htm" title="用 Python 定义 Schema 并生成 Parquet 文件">用 Python 定义 Schema 并生成 Parquet 文件</a></li>
+                        <li class="py-2"><a href="/news/article-19158.htm" title="南京宠物托运飞机（南京机场托运宠物）">南京宠物托运飞机（南京机场托运宠物）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-4-free-node-subscribe-links.htm" title="「12月4日」最高速度19.6M/S，2024年最新高速Clash-Meta免费节点订阅链接">「12月4日」最高速度19.6M/S，2024年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-49845.htm" title="动物疫苗合格证明在哪办理的 动物疫苗合格证明在哪办理的呢">动物疫苗合格证明在哪办理的 动物疫苗合格证明在哪办理的呢</a></li>
+                        <li class="py-2"><a href="/news/article-28394.htm" title="GET_FORMAT()函数如何与DATE_FORMAT()和STR_TO_DATE()函数结合使用？">GET_FORMAT()函数如何与DATE_FORMAT()和STR_TO_DATE()函数结合使用？</a></li>
+                        <li class="py-2"><a href="/news/article-22367.htm" title="猫咪3针疫苗间隔多久打第三针（小猫咪三针疫苗间隔时间）">猫咪3针疫苗间隔多久打第三针（小猫咪三针疫苗间隔时间）</a></li>
+                        <li class="py-2"><a href="/news/article-34090.htm" title="免费宠物领养是不是真的假的（免费宠物领养是不是真的假的呢）">免费宠物领养是不是真的假的（免费宠物领养是不是真的假的呢）</a></li>
+                        <li class="py-2"><a href="/news/article-38435.htm" title="动物防疫年度计划（动物防疫年度工作总结）">动物防疫年度计划（动物防疫年度工作总结）</a></li>
                     </ul>
     </div>
 </div>
@@ -152,7 +153,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">69</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+                <h4><span class="badge" style="float: right;">75</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
