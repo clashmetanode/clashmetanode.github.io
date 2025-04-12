@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashmetanode.github.io/news/article-91739.htm" />
+    <title>使用TreeMap在Java中对用户定义的对象进行排序</title>
+        <meta name="description" content="要在Java中对用户定义的对象进行排序，代码如下- 示例 import&nbsp;java.io.*; import&nbsp;java.util.*; public&nbsp;class&nbsp;" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashMetaNode官方节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashmetanode.github.io/news/article-91739.htm" />
+    <meta property="og:site_name" content="ClashMetaNode官方节点站" />
+    <meta property="og:title" content="使用TreeMap在Java中对用户定义的对象进行排序" />
+    <meta property="og:image" content="https://clashmetanode.github.io/uploads/20240413/5f8b478a8cd76bfa0fe0bada25ccd65f.webp" />
+        <meta property="og:release_date" content="2025-04-09T09:16:33" />
+    <meta property="og:updated_time" content="2025-04-09T09:16:33" />
+        <meta property="og:description" content="要在Java中对用户定义的对象进行排序，代码如下- 示例 import&nbsp;java.io.*; import&nbsp;java.util.*; public&nbsp;class&nbsp;" />
+        
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="使用TreeMap在Java中对用户定义的对象进行排序">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFCZ6X6RGC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LFCZ6X6RGC');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>使用TreeMap在Java中对用户定义的对象进行排序</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/client.htm">客户端</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>要在Java中对用户定义的对象进行排序，代码如下-</p> <h2>示例</h2> <pre>import&nbsp;java.io.*; import&nbsp;java.util.*; public&nbsp;class&nbsp;Demo{ &nbsp;&nbsp;&nbsp;static&nbsp;void&nbsp;sort_objects(String&nbsp;my_data){ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String[]&nbsp;my_vals&nbsp;=&nbsp;my_data.split("&nbsp;"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;Integer,&nbsp;ArrayList&lt;String&gt;&nbsp;&gt;&nbsp;my_map&nbsp;=&nbsp;new&nbsp;TreeMap&lt;&gt;(); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(int&nbsp;i&nbsp;=&nbsp;1;&nbsp;i&nbsp;&lt;&nbsp;my_vals.length;&nbsp;i&nbsp;+=&nbsp;2){ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;my_age&nbsp;=&nbsp;Integer.parseInt(my_vals[i]); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;name&nbsp;=&nbsp;my_vals[i&nbsp;-&nbsp;1]; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(my_map.containsKey(my_age)){ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ArrayList&lt;String&gt;&nbsp;my_list&nbsp;=&nbsp;my_map.get(my_age); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my_list.add(name); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Collections.sort(my_list); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my_map.remove(my_age); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my_map.put(my_age,&nbsp;my_list); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ArrayList&lt;String&gt;&nbsp;my_list&nbsp;=&nbsp;new&nbsp;ArrayList&lt;&gt;(); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my_list.add(name); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my_map.put(my_age,&nbsp;my_list); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(Map.Entry&lt;Integer,&nbsp;ArrayList&lt;String&gt;&nbsp;&gt;&nbsp;entry&nbsp;:&nbsp;my_map.entrySet()){ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ArrayList&lt;String&gt;&nbsp;al1&nbsp;=&nbsp;entry.getValue(); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(int&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;al1.size();&nbsp;i++) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(al1.get(i)&nbsp;+&nbsp;"&nbsp;"&nbsp;+&nbsp;entry.getKey()&nbsp;+&nbsp;"&nbsp;"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;void&nbsp;main(String&nbsp;args[]){ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;my_obj&nbsp;=&nbsp;"Joe&nbsp;36&nbsp;Hannah&nbsp;24&nbsp;Jill&nbsp;13&nbsp;Jack&nbsp;1&nbsp;Preet&nbsp;8&nbsp;Deep&nbsp;45"; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("排序后的对象是："); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sort_objects(my_obj); &nbsp;&nbsp;&nbsp;} }</pre> <p>输出结果</p> <pre>排序后的对象是： Jack&nbsp;1&nbsp;Preet&nbsp;8&nbsp;Jill&nbsp;13&nbsp;Hannah&nbsp;24&nbsp;Joe&nbsp;36&nbsp;Deep&nbsp;45</pre> <p>名为Demo的类包含一个名为sort_objects的函数，该函数创建一个将整数和数组列表映射的哈希表。 它遍历这些值，并检查哪个是字符串，哪个是整数元素，并根据整数值对它们进行排序。 在main函数中，将创建字符串对象，并在该字符串对象上调用该函数，并在控制台上显示相关消息。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-90978.htm">打过疫苗的猫轻微抓伤有一点渗血正常吗图片（打过疫苗的猫抓了一下红色划痕）</a></p>
+                                        <p>下一个：<a href="/news/article-91740.htm">合肥宠物狗领养 合肥宠物狗领养基地</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-18-free-clash.htm" title="「3月18日」最高速度19.1M/S，2025年最新高速Clash-Meta免费节点订阅链接">「3月18日」最高速度19.1M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-74794.htm" title="女人养猫的十大坏处（女人养猫的十大坏处视频播放）">女人养猫的十大坏处（女人养猫的十大坏处视频播放）</a></li>
+                        <li class="py-2"><a href="/news/article-84478.htm" title="关于饲料颗粒机器一台小型多少钱的信息">关于饲料颗粒机器一台小型多少钱的信息</a></li>
+                        <li class="py-2"><a href="/news/article-83052.htm" title="宠物领养市场分析报告模板（宠物领养网站论文）">宠物领养市场分析报告模板（宠物领养网站论文）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-clash-windows.htm" title="「3月7日」最高速度22.7M/S，2025年最新高速Clash-Meta免费节点订阅链接">「3月7日」最高速度22.7M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-17-free-node-subscribe-links.htm" title="「3月17日」最高速度22.3M/S，2025年最新高速Clash-Meta免费节点订阅链接">「3月17日」最高速度22.3M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-78878.htm" title="打过疫苗的猫抓伤了需要打疫苗吗（打过疫苗的猫抓伤了要打狂犬疫苗吗）">打过疫苗的猫抓伤了需要打疫苗吗（打过疫苗的猫抓伤了要打狂犬疫苗吗）</a></li>
+                        <li class="py-2"><a href="/news/article-76150.htm" title="流浪猫认主的表现（流浪猫认主的表现是什么）">流浪猫认主的表现（流浪猫认主的表现是什么）</a></li>
+                        <li class="py-2"><a href="/news/article-90246.htm" title="成都领养宠物中心电话号码（成都领养宠物中心电话号码是多少）">成都领养宠物中心电话号码（成都领养宠物中心电话号码是多少）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-6-free-clash-subscribe.htm" title="「3月6日」最高速度19.1M/S，2025年最新高速Clash-Meta免费节点订阅链接">「3月6日」最高速度19.1M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                ClashMetaNode官方节点站 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
