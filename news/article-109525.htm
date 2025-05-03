@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashmetanode.github.io/news/article-109525.htm" />
+    <title>基于知名微服务框架go-micro开发gRPC应用程序</title>
+        <meta name="description" content="go-micro是golang的一个微服务框架。 go-micro各个版本之间的兼容性问题一直被诟病，前几年go-micro更是分化出了两个分支： 一个延续了go-micro，只不过转到了其公司CEO" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashMetaNode官方节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashmetanode.github.io/news/article-109525.htm" />
+    <meta property="og:site_name" content="ClashMetaNode官方节点站" />
+    <meta property="og:title" content="基于知名微服务框架go-micro开发gRPC应用程序" />
+    <meta property="og:image" content="https://clashmetanode.github.io/uploads/20240413/b8bebda4fc3bafdf45f1d721bed3638c.webp" />
+        <meta property="og:release_date" content="2025-05-02T09:22:33" />
+    <meta property="og:updated_time" content="2025-05-02T09:22:33" />
+        <meta property="og:description" content="go-micro是golang的一个微服务框架。 go-micro各个版本之间的兼容性问题一直被诟病，前几年go-micro更是分化出了两个分支： 一个延续了go-micro，只不过转到了其公司CEO" />
+        
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="基于知名微服务框架go-micro开发gRPC应用程序">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFCZ6X6RGC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LFCZ6X6RGC');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>基于知名微服务框架go-micro开发gRPC应用程序</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/client.htm">客户端</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="news" id="xcblog-blog-defined">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<p>go-micro是golang的一个微服务框架。</p> <p>go-micro各个版本之间的兼容性问题一直被诟病，前几年go-micro更是分化出了两个分支：</p> <p>一个延续了go-micro，只不过转到了其公司CEO的个人Github仓库中，访问地址：</p> <p>asim/go-micro: A Go microservices framework (github.com)</p> <p>一个转向了云原生方向，名字叫Micro，访问地址：</p> <p>micro/micro: API first cloud platform (github.com)</p> <p>不过都还是开源的，当前的许可证都是Apache 2.0，不是某些人说的不能商用了，当然无法保证以后不会改许可证。</p> <hr/> <p>回到正文，这篇文章将介绍使用go-micro最新版本v4开发gRPC服务的方式。</p> </h1> <p>这个工具也称为proto编译器，可以用来生成各种开发语言使用proto协议的代码。</p> <p>下载地址：https://github.com/protocolbuffers/protobuf/releases</p> <p>一般下载最新版本就行，注意要符合自己当前的操作系统。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/3a15f9dda18528d0985c519c4e907b31.jpg" alt="基于知名微服务框架go-micro开发gRPC应用程序"></p> <p>解压后里边有个<em>protoc.exe</em> ，拷贝到<em>GOPATH</em> 的 bin 目录下，我这里就是<em>C:/Users/PC-001/go/bin</em> ，PC-<em>001</em> 是登录当前操作系统的用户名，需要换成你自己的。<em>GOPATH</em> 可以通过执行<em>go env</em> 查看到。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/d4da714043efb8da92632b5a395088f6.jpg" alt="基于知名微服务框架go-micro开发gRPC应用程序"></p> <p>一般都是把<em>GOPATH</em> 的<em>bin</em> 目录添加到环境变量的<em>PATH</em> 变量中，如果没有，请自行添加上。</p> </h1> <p>需要安装两个插件，它们用来生成 Golang 版本的 proto 协议代码和 go-micro 的 gRPC 代理代码。</p> <p>执行如下命令，会在<em>GOPATH</em> 的<em>bin</em> 目录下生成两个可执行文件：<em>protoc-gen-go.exe</em> 和<em>protoc-gen-micro.exe</em>。</p> <pre><code class="language-powershell">go install google.golang.org/protobuf/cmd/protoc-gen-go go install go-micro.dev/v4/cmd/protoc-gen-micro@v4</code></pre> </h1> <p>proto文件是符合Protocol Buffers语言规范的数据交换协议文件，就像以前WebService定义服务时使用的XML文件。现在一般都是用proto3了，这里创建一个名为<em>hello.proto</em> 的文件，放到项目的proto目录下：</p> <pre><code class="language-go">syntax = "proto3";  option go_package="/proto";  package Business;  service Hello {   rpc Say (SayRequest) returns (SayResponse); }  message SayResponse {   string Message = 1; }  message SayRequest {   string Name = 1; }</code></pre> <p>这个协议很简单，有个名字为Hello的服务，提供一个名字为Say的rpc方法，这个方法有输入输出，输入信息中有一个名为Name的参数，输出信息中有一个名为Message的返回值。</p> </h1> <p>在项目根目录中执行如下命令，会在proto目录下生成两个文件：hello.pb.go 和 hello.pb.micro.go。</p> <pre><code>protoc --go_out=. --go_opt=paths=source_relative --micro_out=. --micro_opt=paths=source_relative proto/hello.proto</code></pre> <p>hello.pb.go 中是输入输出数据类型的Golang定义，hello.pb.micro.go 中是go-micro客户端和服务端的gRPC代理程序。</p> <p>也可以将文件生成到别的目录中，比如修改<em>proto</em> 文件中<em>go_package</em> 的配置为：</p> <pre><code>option go_package="/business";</code></pre> <p>然后执行下面的命令，会生成到项目下的business目录中：</p> <pre><code>protoc --go_out=.  --micro_out=. proto/hello.proto</code></pre> <p>具体这个命令还有哪些参数，可以执行<em>protoc -help</em> 去探索下，这里就不罗嗦了。</p> </h1> <p>这里先上代码：</p> <pre><code class="language-go">package main  import ( 	"context" 	"fmt" 	"grpchello/proto" 	"log" 	"time"  	"github.com/asim/go-micro/plugins/server/grpc/v4" 	"go-micro.dev/v4" 	"go-micro.dev/v4/server" )  type Hello struct{}  func (s *Hello) Say(ctx context.Context, req *proto.SayRequest, rsp *proto.SayResponse) error { 	fmt.Println("request:", req.Name) 	rsp.Message = "Hello " + req.Name 	return nil }  func main() {  	grpcServer := grpc.NewServer()  	service := micro.NewService( 		micro.Server(grpcServer), 		micro.Name("grpchello.service"), 		micro.Address("0.0.0.0:8001"), 		micro.RegisterTTL(time.Second*30), 		micro.RegisterInterval(time.Second*10), 	)  	// optionally setup command line usage 	service.Init()  	// Register Handlers 	proto.RegisterHelloHandler(service.Server(), &amp;Hello{})  	// Run server 	if err := service.Run(); err != nil { 		log.Fatal(err) 	} }</code></pre> <p>整个过程如下：</p> <p>先定义一个名为 Hello 的类型，它去实现hello.pb.micro.go中生成的HelloHandler接口，也就是编写具体的业务实现。</p> <p>然后通过grpc.NewServer创建一个gRPC服务器，这里决定go-micro底层通信使用gPRC；</p> <p>然后通过micro.NewService创建一个micro服务，这里需要传入上面创建的grpc server，还要设置服务的名称、监听端口，以及保持服务健康用的TTL和上报周期。go-mico当前默认的服务发现机制是mdns，不用额外部署服务发现工具，不过一般只建议在开发环境使用，生产环境建议使用etcd；</p> <p>通过上面的步骤对服务进行一些初始化之后，再将Hello类型的实例注册到grpc server；</p> <p>最后启动服务，就可以开始接客了。</p> <p>如果直接粘贴这段代码的话，会有很多包没有引用进来，可以通过<em>go get</em> 获取这些包，也可以执行命令：<em>go mod tidy</em> 来引入需要的包。</p> <p>这里边还import了一个<em>grpchello/proto</em> ，这个是我这边项目的mod是<em>grpchello</em>，gRPC代理程序的package是proto，如果你的不一样，需要修改下。</p> </h1> <p>访问gRPC服务也是通过<em>hello.pb.micro.go</em> 中生成的方法，直接上代码：</p> <pre><code class="language-go">package main  import ( 	"bufio" 	"context" 	"fmt" 	"grpchello/proto" 	"os"  	"github.com/asim/go-micro/plugins/client/grpc/v4" 	"go-micro.dev/v4" )  func main() {  	service := micro.NewService( 		micro.Client(grpc.NewClient()), 	)  	service.Init() 	client := proto.NewHelloService("grpchello.service", service.Client())  	rsp, err := client.Say(context.TODO(), &amp;proto.SayRequest{Name: "BOSSMA"}) 	if err != nil { 		fmt.Println(err) 	}  	fmt.Println(rsp)  	fmt.Println("按回车键退出程序...") 	in := bufio.NewReader(os.Stdin) 	_, _, _ = in.ReadLine() }</code></pre> <p>上面的程序使用了<em>grpc.NewClient</em> , 这决定了底层通信采用gRPC；然后再使用生成的代码<em>proto.NewHelloService</em> 创建客户端代理，这里指定的服务名字必须是服务端注册的名字；最后使用这个客户端代理调用相应的方法。</p> </h1> <p>可以使用<em>go run xxx.go</em> 来编译并运行程序。这里为了方便测试，先使用<em>go build</em> 将它们编译为exe，然后再双击运行。实际运行效果如下：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/03cbf71500c04ea9705d39f93be931c7.jpg" alt="基于知名微服务框架go-micro开发gRPC应用程序"></p> <hr/> <p>以上就是本文的主要内容了，完整代码示例已经上传到 Github：https://github.com/bosima/go-demo/tree/main/go-micro-grpc-hello</p> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-109524.htm">Spring boot项目中自定义FeignClient的拦截器处理header和签名等信息</a></p>
+                                        <p>下一个：<a href="/news/article-110342.htm">java多线程[5]：信号量(Semaphore)</a></p>
+                                    </div>
+                                        </div>
+                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-93887.htm" title="送养一个孩子怎样写协议书呢图片（孩子送养怎样写送养协议）">送养一个孩子怎样写协议书呢图片（孩子送养怎样写送养协议）</a></li>
+                        <li class="py-2"><a href="/news/article-100707.htm" title="动物疫苗经销商有哪些公司（动物疫苗销售需要什么手续）">动物疫苗经销商有哪些公司（动物疫苗销售需要什么手续）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-13-free-clash.htm" title="「4月13日」最高速度19M/S，2025年最新高速Clash-Meta免费节点订阅链接">「4月13日」最高速度19M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-94750.htm" title="兰州大型宠物狗市场（兰州最大的宠物市场在哪里）">兰州大型宠物狗市场（兰州最大的宠物市场在哪里）</a></li>
+                        <li class="py-2"><a href="/news/article-89534.htm" title="我所在的城市有一家宠物医院用英语怎么说 我所在的城市有一家宠物医院用英语怎么说">我所在的城市有一家宠物医院用英语怎么说 我所在的城市有一家宠物医院用英语怎么说</a></li>
+                        <li class="py-2"><a href="/news/article-100705.htm" title="广州宠物救助领养中心 广州宠物救助领养中心地址">广州宠物救助领养中心 广州宠物救助领养中心地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-7-free-shadowrocket-node.htm" title="「4月7日」最高速度21.6M/S，2025年最新高速Clash-Meta免费节点订阅链接">「4月7日」最高速度21.6M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-93239.htm" title="动物疫苗保质期一般多久 动物疫苗保质期一般多久啊">动物疫苗保质期一般多久 动物疫苗保质期一般多久啊</a></li>
+                        <li class="py-2"><a href="/news/article-106825.htm" title="猫咪体外驱虫怎么操作图片（猫咪体外驱虫怎么操作图片大全）">猫咪体外驱虫怎么操作图片（猫咪体外驱虫怎么操作图片大全）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-5-free-clash.htm" title="「4月5日」最高速度20.9M/S，2025年最新高速Clash-Meta免费节点订阅链接">「4月5日」最高速度20.9M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">87</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                ClashMetaNode官方节点站 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

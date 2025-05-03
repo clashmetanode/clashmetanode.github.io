@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashmetanode.github.io/news/article-109524.htm" />
+    <title>Spring boot项目中自定义FeignClient的拦截器处理header和签名等信息</title>
+        <meta name="description" content="我们在请求第三方接口的时候通常由比较复杂但是统一的header和签名计算的一系列处理。这个时候就可以使用RequestInterceptor来实现。上代码： @Slf4j @Configuration" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashMetaNode官方节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashmetanode.github.io/news/article-109524.htm" />
+    <meta property="og:site_name" content="ClashMetaNode官方节点站" />
+    <meta property="og:title" content="Spring boot项目中自定义FeignClient的拦截器处理header和签名等信息" />
+    <meta property="og:image" content="https://clashmetanode.github.io/uploads/20240413/8ff6cbcd33823d619a87c818b6ced094.webp" />
+        <meta property="og:release_date" content="2025-05-02T09:22:33" />
+    <meta property="og:updated_time" content="2025-05-02T09:22:33" />
+        <meta property="og:description" content="我们在请求第三方接口的时候通常由比较复杂但是统一的header和签名计算的一系列处理。这个时候就可以使用RequestInterceptor来实现。上代码： @Slf4j @Configuration" />
+        
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Spring boot项目中自定义FeignClient的拦截器处理header和签名等信息">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFCZ6X6RGC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LFCZ6X6RGC');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>Spring boot项目中自定义FeignClient的拦截器处理header和签名等信息</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/client.htm">客户端</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="news" id="xcblog-blog-defined">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="htmledit_views"> <p>我们在请求第三方接口的时候通常由比较复杂但是统一的header和签名计算的一系列处理。这个时候就可以使用RequestInterceptor来实现。上代码：</p> <pre><code class="language-java">@Slf4j @Configuration  // a  global feign client interceptor public class FeignClientsConfigurationInterceptor implements RequestInterceptor {      @Override     public void apply(RequestTemplate template) {         try {             log.info("=======  FeignClientsConfigurationInterceptor ========"); //反序列化request body,拿到核心的参数projectId,用来获得请求接口用的appkey和appId JSONObject requestBody= (JSONObject) JSON.parse(new String(template.body()));             String projectId = (String) requestBody.get("projectId"); //过河拆桥，把projectId从 request body 移除（因为这个参数只是我方程序获取密钥时需要，但请求地第三方接口不需要）             requestBody.remove("projectId");             log.info("projectId =" + projectId);             PingAnKeyProperties pingAnKeyProperties = PingAnKeyProperties.getPingAnKeys(projectId);             String apiUrl = template.url();             log.info("apiUrl =" + apiUrl);             String app_id = pingAnKeyProperties.getAppId();             String app_key= pingAnKeyProperties.getAppKey();              log.info("app_id =" + app_id);             log.info("app_key =" + app_key);             String deviceId =SignUtils.getLocalMac();             String timestamp = Long.toString(System.currentTimeMillis());             Map&lt;String, String&gt; headers = new HashMap();             headers.put("X-Appid", app_id);             headers.put("Content-Type", "application/json;charset=utf-8");              Iterator&lt;String&gt; it =  headers.keySet().iterator();             while (it.hasNext()) {                 String header_key = it.next();                 template.header(header_key, headers.get(header_key));             }             String method = template.method();             String bodyText = requestBody.toJSONString(); //使用template.body(bodyText) API重置移除projectId之后的reqeust body             template.body(bodyText);    //reset body text             String body_content = new String(template.body());             log.debug("body_content = "+ body_content);             String body_hash = SignUtils.SHA(body_content, "SHA-256"); //            log.info(body_hash);             String sign_data = SignUtils.getSign(method,                     apiUrl,                     "", headers, body_hash,app_key);             template.header("X-Authorization",                     sign_data.toLowerCase());         } catch (SocketException e) {             e.printStackTrace();         } catch (UnknownHostException e) {             e.printStackTrace();         } catch (UnsupportedEncodingException e) {             e.printStackTrace();         }         log.info("===============");     } } </code></pre> <p>&nbsp;总结：通过RequestTemplate对象我们可以拿到reqeust的几乎所有参数，url， reqeust body，method等等，熟悉RequestTemplate的API就能比较轻松的实现对原reqeust的拦截和改造。我是试了好久才找到重置requestbody的API原来是下面的方法，附源码截图：</p> <p><img fetchpriority="high" decoding="async" alt="" height="716" src="http://img.555519.xyz/uploads/20230119/d93b56e1af04c0abdb18a83c7b24ba53.jpg"></p> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-108695.htm">小型宠物粮加工厂需要什么手续呢多少钱一个（宠物粮食加工厂）</a></p>
+                                        <p>下一个：<a href="/news/article-109525.htm">基于知名微服务框架go-micro开发gRPC应用程序</a></p>
+                                    </div>
+                                        </div>
+                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-104563.htm" title="详解MySQL索引">详解MySQL索引</a></li>
+                        <li class="py-2"><a href="/news/article-86627.htm" title="宠物粮行业的基本特点 宠物粮行业的基本特点是什么">宠物粮行业的基本特点 宠物粮行业的基本特点是什么</a></li>
+                        <li class="py-2"><a href="/news/article-93887.htm" title="送养一个孩子怎样写协议书呢图片（孩子送养怎样写送养协议）">送养一个孩子怎样写协议书呢图片（孩子送养怎样写送养协议）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-15-clash-v2ray-ss-ssr.htm" title="「4月15日」最高速度19.7M/S，2025年最新高速Clash-Meta免费节点订阅链接">「4月15日」最高速度19.7M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-23-clash-windows.htm" title="「4月23日」最高速度20.8M/S，2025年最新高速Clash-Meta免费节点订阅链接">「4月23日」最高速度20.8M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-89533.htm" title="宠物粮食生意怎么样啊（宠物粮食店一年利润怎么样）">宠物粮食生意怎么样啊（宠物粮食店一年利润怎么样）</a></li>
+                        <li class="py-2"><a href="/news/article-96958.htm" title="c++引用折叠">c++引用折叠</a></li>
+                        <li class="py-2"><a href="/news/article-90977.htm" title="win11系统网络发现已关闭怎么办">win11系统网络发现已关闭怎么办</a></li>
+                        <li class="py-2"><a href="/news/article-98430.htm" title="宠物领养网站的意义 宠物领养网站的意义是什么">宠物领养网站的意义 宠物领养网站的意义是什么</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-5-free-clash.htm" title="「4月5日」最高速度20.9M/S，2025年最新高速Clash-Meta免费节点订阅链接">「4月5日」最高速度20.9M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">87</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                ClashMetaNode官方节点站 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
