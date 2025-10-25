@@ -1,4 +1,4 @@
-# 「10月19日」最高速度21.3M/S，2025年最新高速Clash-Meta免费节点订阅链接  更新时间 2025-10-19 08:23:13
+# 「10月25日」最高速度20.5M/S，2025年最新高速Clash-Meta免费节点订阅链接  更新时间 2025-10-25 09:05:28
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clashmetanode.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://clashmetanode.github.io/uploads/2025/10/0-20251019.yaml
-- https://clashmetanode.github.io/uploads/2025/10/1-20251019.yaml
-- https://clashmetanode.github.io/uploads/2025/10/2-20251019.yaml
-- https://clashmetanode.github.io/uploads/2025/10/3-20251019.yaml
-- https://clashmetanode.github.io/uploads/2025/10/4-20251019.yaml
+- https://clashmetanode.github.io/uploads/2025/10/0-20251025.yaml
+- https://clashmetanode.github.io/uploads/2025/10/1-20251025.yaml
+- https://clashmetanode.github.io/uploads/2025/10/2-20251025.yaml
+- https://clashmetanode.github.io/uploads/2025/10/3-20251025.yaml
+- https://clashmetanode.github.io/uploads/2025/10/4-20251025.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://clashmetanode.github.io/uploads/2025/10/0-20251019.txt
-- https://clashmetanode.github.io/uploads/2025/10/1-20251019.txt
-- https://clashmetanode.github.io/uploads/2025/10/2-20251019.txt
-- https://clashmetanode.github.io/uploads/2025/10/3-20251019.txt
-- https://clashmetanode.github.io/uploads/2025/10/4-20251019.txt
+- https://clashmetanode.github.io/uploads/2025/10/0-20251025.txt
+- https://clashmetanode.github.io/uploads/2025/10/1-20251025.txt
+- https://clashmetanode.github.io/uploads/2025/10/2-20251025.txt
+- https://clashmetanode.github.io/uploads/2025/10/3-20251025.txt
+- https://clashmetanode.github.io/uploads/2025/10/4-20251025.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://clashmetanode.github.io/uploads/2025/10/20251019.json
+- https://clashmetanode.github.io/uploads/2025/10/20251025.json
 
 ## 更多Clash节点订阅 ：
 
