@@ -335,29 +335,9 @@ opkg upgrade v2ray-core
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 的 TUN 模式与系统代理有何区别？</h5></div>
+    <div class="panel-heading"><h5>VMess AEAD 加密能防止哪些风险？</h5></div>
     <div class="panel-body">
-        TUN 模式拦截系统 IP 层流量，实现全局代理，而系统代理通常只影响支持代理的应用。TUN 更适合游戏、视频和全局科学上网场景，保证所有流量通过节点，提高稳定性和速度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 是否支持多配置文件切换？</h5></div>
-    <div class="panel-body">
-        支持。Nekobox 允许用户创建多个配置文件并快速切换，适合在不同网络环境下使用不同规则。例如家用网络与移动数据可使用独立的配置方案。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 中的 alterId 是什么，现在还有必要配置吗？</h5></div>
-    <div class="panel-body">
-        alterId 曾用于 VMess 的用户混淆机制以防止重放攻击，但在 V2Ray 新版本与 VLess 出现后，alterId 已不再推荐使用。现代配置多使用 UUID 或直接迁移至 VLess/XTLS 以获得更好性能与安全性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 如何兼容 Clash 的配置文件？</h5></div>
-    <div class="panel-body">
-        Sing-box 支持 Clash 规则格式的解析，用户可直接导入 Clash 的 YAML 配置文件进行使用。虽然部分高级参数需要调整，但大多数分流和策略配置都能自动识别，便于迁移。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 的重写规则能做什么？</h5></div>
-    <div class="panel-body">
-        重写（Rewrite）可用于修改请求头、屏蔽广告、替换响应内容等。通过正则匹配目标请求可实现页面定制与功能增强，但应谨慎使用以避免影响正常网站加载与安全验证。<hr />    </div>
+        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。在高封锁环境下使用，有助于保持节点长期可用，保证数据安全和连接稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + XTLS 在移动网络的优势是什么？</h5></div>
@@ -365,9 +345,14 @@ opkg upgrade v2ray-core
         XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定移动网络。结合策略组和节点切换，可提升网页浏览、视频播放和游戏连接的稳定性和流畅度。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何配置 Clash 的 GEOIP 分流？</h5></div>
+    <div class="panel-heading"><h5>Mellow 的 TUN 模式与系统代理有何区别？</h5></div>
     <div class="panel-body">
-        Clash 支持使用 GEOIP 数据库进行区域分流。用户在规则文件中添加 `GEOIP,CN,DIRECT` 可使国内流量直连，而国外流量走代理，从而提升整体网络性能。<hr />    </div>
+        TUN 模式拦截系统 IP 层流量，实现全局代理，而系统代理通常只影响支持代理的应用。TUN 更适合游戏、视频和全局科学上网场景，保证所有流量通过节点，提高稳定性和速度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 中的 alterId 是什么，现在还有必要配置吗？</h5></div>
+    <div class="panel-body">
+        alterId 曾用于 VMess 的用户混淆机制以防止重放攻击，但在 V2Ray 新版本与 VLess 出现后，alterId 已不再推荐使用。现代配置多使用 UUID 或直接迁移至 VLess/XTLS 以获得更好性能与安全性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 的广告屏蔽原理是什么？</h5></div>
@@ -375,14 +360,29 @@ opkg upgrade v2ray-core
         QuantumultX 使用分流规则与脚本结合的方式实现广告屏蔽。通过重写 HTTP 请求和阻止特定域名，它能有效去除 App 内广告或网页弹窗，提升浏览体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 的节点自动测速功能如何配置？</h5></div>
+    <div class="panel-heading"><h5>如何配置 Clash 的 GEOIP 分流？</h5></div>
     <div class="panel-body">
-        Matsuri 可以设置测速周期和节点列表，程序会自动测试延迟和速度并排序。用户可根据测试结果选择最佳节点，提高网络访问速度和使用体验。<hr />    </div>
+        Clash 支持使用 GEOIP 数据库进行区域分流。用户在规则文件中添加 `GEOIP,CN,DIRECT` 可使国内流量直连，而国外流量走代理，从而提升整体网络性能。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密能防止哪些风险？</h5></div>
+    <div class="panel-heading"><h5>Nekobox 是否支持多配置文件切换？</h5></div>
     <div class="panel-body">
-        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。在高封锁环境下使用，有助于保持节点长期可用，保证数据安全和连接稳定性。    </div>
+        支持。Nekobox 允许用户创建多个配置文件并快速切换，适合在不同网络环境下使用不同规则。例如家用网络与移动数据可使用独立的配置方案。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 的重写规则能做什么？</h5></div>
+    <div class="panel-body">
+        重写（Rewrite）可用于修改请求头、屏蔽广告、替换响应内容等。通过正则匹配目标请求可实现页面定制与功能增强，但应谨慎使用以避免影响正常网站加载与安全验证。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 如何兼容 Clash 的配置文件？</h5></div>
+    <div class="panel-body">
+        Sing-box 支持 Clash 规则格式的解析，用户可直接导入 Clash 的 YAML 配置文件进行使用。虽然部分高级参数需要调整，但大多数分流和策略配置都能自动识别，便于迁移。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 的节点自动测速功能如何配置？</h5></div>
+    <div class="panel-body">
+        Matsuri 可以设置测速周期和节点列表，程序会自动测试延迟和速度并排序。用户可根据测试结果选择最佳节点，提高网络访问速度和使用体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -412,16 +412,16 @@ opkg upgrade v2ray-core
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-11-20-free-v2ray-subscribe.htm" title="「11月20日」最高速度19.4M/S，2025年最新高速Clash-Meta免费节点订阅链接">「11月20日」最高速度19.4M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-18-free-high-speed-nodes.htm" title="「12月18日」最高速度18.2M/S，2025年最新高速Clash-Meta免费节点订阅链接">「12月18日」最高速度18.2M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-11-node-share.htm" title="「12月11日」最高速度19.1M/S，2025年最新高速Clash-Meta免费节点订阅链接">「12月11日」最高速度19.1M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-7-node-share.htm" title="「12月7日」最高速度20.4M/S，2025年最新高速Clash-Meta免费节点订阅链接">「12月7日」最高速度20.4M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-8-free-ssr-node.htm" title="「12月8日」最高速度18.1M/S，2025年最新高速Clash-Meta免费节点订阅链接">「12月8日」最高速度18.1M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-28-free-high-speed-nodes.htm" title="「11月28日」最高速度19.8M/S，2025年最新高速Clash-Meta免费节点订阅链接">「11月28日」最高速度19.8M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-22-shadowrocket-node.htm" title="「11月22日」最高速度21.1M/S，2025年最新高速Clash-Meta免费节点订阅链接">「11月22日」最高速度21.1M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-11-clash-node-daily-updates.htm" title="「11月11日」最高速度18.9M/S，2025年最新高速Clash-Meta免费节点订阅链接">「11月11日」最高速度18.9M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-5-free-ssr-subscribe.htm" title="「11月5日」最高速度21.6M/S，2025年最新高速Clash-Meta免费节点订阅链接">「11月5日」最高速度21.6M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-13-free-node-subscribe-links.htm" title="「12月13日」最高速度22.3M/S，2025年最新高速Clash-Meta免费节点订阅链接">「12月13日」最高速度22.3M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-6-free-subscribe-node.htm" title="「12月6日」最高速度18.3M/S，2025年最新高速Clash-Meta免费节点订阅链接">「12月6日」最高速度18.3M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-17-free-ssr-subscribe.htm" title="「11月17日」最高速度19.4M/S，2025年最新高速Clash-Meta免费节点订阅链接">「11月17日」最高速度19.4M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-3-free-v2ray-subscribe.htm" title="「12月3日」最高速度20.3M/S，2025年最新高速Clash-Meta免费节点订阅链接">「12月3日」最高速度20.3M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-12-9-clash-windows.htm" title="「12月9日」最高速度21.8M/S，2025年最新高速Clash-Meta免费节点订阅链接">「12月9日」最高速度21.8M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-4-free-node-subscribe-links.htm" title="「12月4日」最高速度20.2M/S，2025年最新高速Clash-Meta免费节点订阅链接">「12月4日」最高速度20.2M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-21-free-high-speed-nodes.htm" title="「11月21日」最高速度22.5M/S，2025年最新高速Clash-Meta免费节点订阅链接">「11月21日」最高速度22.5M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-15-clash-windows.htm" title="「11月15日」最高速度21.8M/S，2025年最新高速Clash-Meta免费节点订阅链接">「11月15日」最高速度21.8M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-27-node-share.htm" title="「11月27日」最高速度20.3M/S，2025年最新高速Clash-Meta免费节点订阅链接">「11月27日」最高速度20.3M/S，2025年最新高速Clash-Meta免费节点订阅链接</a></li>
                     </ul>
     </div>
 </div>
@@ -433,7 +433,7 @@ opkg upgrade v2ray-core
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">10</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
+                <h4><span class="badge" style="float: right;">17</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
